@@ -13,19 +13,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2021-03-20T13:52:27.315+01:00
-  initializedAtString: 2021-03-20T13:33:36.307+01:00
+  lastUpdatedAtString: 2021-03-20T20:20:53.062+01:00
+  initializedAtString: 2021-03-20T20:20:47.829+01:00
   localBranches:
+  - name: Bundel48_GUI
+    tracking: 
   - name: GUI
     tracking: origin/GUI
+  - name: GUITransition
+    tracking: 
   - name: main
     tracking: origin/main
   remoteBranches:
+  - name: origin/Bundel48_GUI
+    tracking: '[None]'
+  - name: origin/GUI
+    tracking: '[None]'
+  - name: origin/GUITransition
+    tracking: '[None]'
   - name: origin/HEAD
+    tracking: '[None]'
+  - name: origin/main
     tracking: '[None]'
   remotes:
   - name: origin
-    url: https://github.com/Bundel48/UpdateDeutschland.git
+    url: git@github.com:Bundel48/UpdateDeutschland.git
     login: 
     user: 
     host: 
@@ -33,35 +45,71 @@ MonoBehaviour:
     token: 
   localConfigBranches:
     keys:
+    - Bundel48_GUI
     - GUI
+    - GUITransition
     - main
     values:
+    - name: Bundel48_GUI
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
     - name: GUI
       remote:
         name: origin
-        url: https://github.com/Bundel48/UpdateDeutschland.git
+        url: git@github.com:Bundel48/UpdateDeutschland.git
       trackingBranch: GUI
+    - name: GUITransition
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
     - name: main
       remote:
         name: origin
-        url: https://github.com/Bundel48/UpdateDeutschland.git
+        url: git@github.com:Bundel48/UpdateDeutschland.git
       trackingBranch: main
   remoteConfigBranches:
     keys:
     - origin
     subKeys:
     - Values:
+      - Bundel48_GUI
+      - GUI
+      - GUITransition
       - HEAD
+      - main
     subKeyValues:
     - Values:
+      - name: Bundel48_GUI
+        remote:
+          name: origin
+          url: git@github.com:Bundel48/UpdateDeutschland.git
+        trackingBranch: 
+      - name: GUI
+        remote:
+          name: origin
+          url: git@github.com:Bundel48/UpdateDeutschland.git
+        trackingBranch: 
+      - name: GUITransition
+        remote:
+          name: origin
+          url: git@github.com:Bundel48/UpdateDeutschland.git
+        trackingBranch: 
       - name: HEAD
         remote:
           name: origin
-          url: https://github.com/Bundel48/UpdateDeutschland.git
+          url: git@github.com:Bundel48/UpdateDeutschland.git
+        trackingBranch: 
+      - name: main
+        remote:
+          name: origin
+          url: git@github.com:Bundel48/UpdateDeutschland.git
         trackingBranch: 
   configRemotes:
     keys:
     - origin
     values:
     - name: origin
-      url: https://github.com/Bundel48/UpdateDeutschland.git
+      url: git@github.com:Bundel48/UpdateDeutschland.git

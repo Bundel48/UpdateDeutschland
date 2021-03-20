@@ -13,199 +13,96 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2021-03-20T17:00:30.101+01:00
-  initializedAtString: 2021-03-20T16:30:04.523+01:00
+  lastUpdatedAtString: 2021-03-20T21:13:21.741+01:00
+  initializedAtString: 2021-03-20T21:09:54.863+01:00
   entries:
   - path: GUI\.vs\GUI\v16\.suo
     fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\.vs\GUI\v16\.suo
     projectPath: .vs\GUI\v16\.suo
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: GUI\Assembly-CSharp.csproj
     fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assembly-CSharp.csproj
     projectPath: Assembly-CSharp.csproj
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: GUI\Assembly-CSharp.Player.csproj
     fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assembly-CSharp.Player.csproj
     projectPath: Assembly-CSharp.Player.csproj
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: GUI\Assembly-CSharp-Editor-firstpass.csproj
     fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assembly-CSharp-Editor-firstpass.csproj
     projectPath: Assembly-CSharp-Editor-firstpass.csproj
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Animations.meta
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Animations.meta
-    projectPath: Assets\Animations.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Animations\Communication_Entry_Animation.anim
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Animations\Communication_Entry_Animation.anim
-    projectPath: Assets\Animations\Communication_Entry_Animation.anim
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Animations\Communication_Entry_Animation.anim.meta
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Animations\Communication_Entry_Animation.anim.meta
-    projectPath: Assets\Animations\Communication_Entry_Animation.anim.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Animations\Communication_Exit_Animation.anim
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Animations\Communication_Exit_Animation.anim
-    projectPath: Assets\Animations\Communication_Exit_Animation.anim
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Animations\Communication_Exit_Animation.anim.meta
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Animations\Communication_Exit_Animation.anim.meta
-    projectPath: Assets\Animations\Communication_Exit_Animation.anim.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Animations\Communication_Screen.controller
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Animations\Communication_Screen.controller
-    projectPath: Assets\Animations\Communication_Screen.controller
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Animations\Communication_Screen.controller.meta
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Animations\Communication_Screen.controller.meta
-    projectPath: Assets\Animations\Communication_Screen.controller.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Animations\StartScreen.meta
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Animations\StartScreen.meta
-    projectPath: Assets\Animations\StartScreen.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Animations\StartScreen\Start_Animation.controller
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Animations\StartScreen\Start_Animation.controller
-    projectPath: Assets\Animations\StartScreen\Start_Animation.controller
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Animations\StartScreen\Start_Animation.controller.meta
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Animations\StartScreen\Start_Animation.controller.meta
-    projectPath: Assets\Animations\StartScreen\Start_Animation.controller.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Animations\StartScreen\Start_Entry_Animation.anim
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Animations\StartScreen\Start_Entry_Animation.anim
-    projectPath: Assets\Animations\StartScreen\Start_Entry_Animation.anim
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Animations\StartScreen\Start_Entry_Animation.anim.meta
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Animations\StartScreen\Start_Entry_Animation.anim.meta
-    projectPath: Assets\Animations\StartScreen\Start_Entry_Animation.anim.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Animations\StartScreen\Start_Exit_Animation.anim
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Animations\StartScreen\Start_Exit_Animation.anim
-    projectPath: Assets\Animations\StartScreen\Start_Exit_Animation.anim
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Animations\StartScreen\Start_Exit_Animation.anim.meta
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Animations\StartScreen\Start_Exit_Animation.anim.meta
-    projectPath: Assets\Animations\StartScreen\Start_Exit_Animation.anim.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: GUI\Assets\Scenes\Menu.unity
     fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Scenes\Menu.unity
     projectPath: Assets\Scenes\Menu.unity
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: GUI\Assets\Scripts\MenuControl.cs
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Scripts\MenuControl.cs
-    projectPath: Assets\Scripts\MenuControl.cs
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Scripts\MenuControl.cs.meta
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Scripts\MenuControl.cs.meta
-    projectPath: Assets\Scripts\MenuControl.cs.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Scripts\Neuer Ordner.meta
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Scripts\Neuer
-      Ordner.meta
-    projectPath: Assets\Scripts\Neuer Ordner.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Assets\Scripts\SideMenuV.cs
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Assets\Scripts\SideMenuV.cs
-    projectPath: Assets\Scripts\SideMenuV.cs
+  - path: GUI\Library\APIUpdater\project-dependencies.graph
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\APIUpdater\project-dependencies.graph
+    projectPath: Library\APIUpdater\project-dependencies.graph
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: GUI\GUI.sln
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\GUI.sln
-    projectPath: GUI.sln
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: GUI\Library\ArtifactDB
     fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ArtifactDB
     projectPath: Library\ArtifactDB
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: GUI\Library\Artifacts\08\081b71f690307ccce3d139f8937b2e13
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\08\081b71f690307ccce3d139f8937b2e13
-    projectPath: Library\Artifacts\08\081b71f690307ccce3d139f8937b2e13
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\18\188cd3b69415a4f1d4ff51f00c43416e
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\18\188cd3b69415a4f1d4ff51f00c43416e
-    projectPath: Library\Artifacts\18\188cd3b69415a4f1d4ff51f00c43416e
+  - path: GUI\Library\Artifacts\01\014de72d3e85cd1aebec148233fa5a51
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\01\014de72d3e85cd1aebec148233fa5a51
+    projectPath: Library\Artifacts\01\014de72d3e85cd1aebec148233fa5a51
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Library\Artifacts\1f\1fa0e156c8c96628f1b68383b2451502
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\1f\1fa0e156c8c96628f1b68383b2451502
-    projectPath: Library\Artifacts\1f\1fa0e156c8c96628f1b68383b2451502
+  - path: GUI\Library\Artifacts\02\022c5465d3b932c38762be879cb9ebbc
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\02\022c5465d3b932c38762be879cb9ebbc
+    projectPath: Library\Artifacts\02\022c5465d3b932c38762be879cb9ebbc
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: GUI\Library\Artifacts\13\13bc6901aee24d2e265cbf36214674ce
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\13\13bc6901aee24d2e265cbf36214674ce
+    projectPath: Library\Artifacts\13\13bc6901aee24d2e265cbf36214674ce
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: GUI\Library\Artifacts\20\205f5d902ed50db3bc8afdcfdf48758e
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\20\205f5d902ed50db3bc8afdcfdf48758e
-    projectPath: Library\Artifacts\20\205f5d902ed50db3bc8afdcfdf48758e
+  - path: GUI\Library\Artifacts\16\165b3ac759341aa04ba4ef7f30df33e3
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\16\165b3ac759341aa04ba4ef7f30df33e3
+    projectPath: Library\Artifacts\16\165b3ac759341aa04ba4ef7f30df33e3
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: GUI\Library\Artifacts\23\234b2e05bf4a69cae7189f58c4cf1c30
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\23\234b2e05bf4a69cae7189f58c4cf1c30
-    projectPath: Library\Artifacts\23\234b2e05bf4a69cae7189f58c4cf1c30
+  - path: GUI\Library\Artifacts\19\19241f316bfad15367590ccc5669befa
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\19\19241f316bfad15367590ccc5669befa
+    projectPath: Library\Artifacts\19\19241f316bfad15367590ccc5669befa
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: GUI\Library\Artifacts\27\274e1bc0d62f898275fcc366b2eb894d
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\27\274e1bc0d62f898275fcc366b2eb894d
-    projectPath: Library\Artifacts\27\274e1bc0d62f898275fcc366b2eb894d
+  - path: GUI\Library\Artifacts\1d\1d9adb41b63e73345b1f9e56d4209f6c
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\1d\1d9adb41b63e73345b1f9e56d4209f6c
+    projectPath: Library\Artifacts\1d\1d9adb41b63e73345b1f9e56d4209f6c
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: GUI\Library\Artifacts\2b\2b04845a2fb84a0e2720be5b19f3b6c4
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\2b\2b04845a2fb84a0e2720be5b19f3b6c4
-    projectPath: Library\Artifacts\2b\2b04845a2fb84a0e2720be5b19f3b6c4
+  - path: GUI\Library\Artifacts\26\26bcd7b8c2b0c1021e8deeeeed1bcc92
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\26\26bcd7b8c2b0c1021e8deeeeed1bcc92
+    projectPath: Library\Artifacts\26\26bcd7b8c2b0c1021e8deeeeed1bcc92
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\26\26c7fe88a024e1c6517643a4b85d3e5e
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\26\26c7fe88a024e1c6517643a4b85d3e5e
+    projectPath: Library\Artifacts\26\26c7fe88a024e1c6517643a4b85d3e5e
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -213,218 +110,296 @@ MonoBehaviour:
     fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\31\3185fcc26b16ec2f612cc03eb8cf43f6
     projectPath: Library\Artifacts\31\3185fcc26b16ec2f612cc03eb8cf43f6
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Library\Artifacts\39\39886b91331d667bd39c936977fe45d0
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\39\39886b91331d667bd39c936977fe45d0
-    projectPath: Library\Artifacts\39\39886b91331d667bd39c936977fe45d0
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: GUI\Library\Artifacts\3a\3ac5f18e85915edadfcc9bd06e0ddc8a
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\3a\3ac5f18e85915edadfcc9bd06e0ddc8a
-    projectPath: Library\Artifacts\3a\3ac5f18e85915edadfcc9bd06e0ddc8a
+  - path: GUI\Library\Artifacts\35\354cb47484e96b2eb000517db4f90c24
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\35\354cb47484e96b2eb000517db4f90c24
+    projectPath: Library\Artifacts\35\354cb47484e96b2eb000517db4f90c24
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Library\Artifacts\3e\3ea2214198ee1ba2c94e3dc4261a2ca8
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\3e\3ea2214198ee1ba2c94e3dc4261a2ca8
-    projectPath: Library\Artifacts\3e\3ea2214198ee1ba2c94e3dc4261a2ca8
+  - path: GUI\Library\Artifacts\3e\3eaf11b30b988b5c0cd8fba2a633d2e4
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\3e\3eaf11b30b988b5c0cd8fba2a633d2e4
+    projectPath: Library\Artifacts\3e\3eaf11b30b988b5c0cd8fba2a633d2e4
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\40\40e11bca0cc66a93ace7588acdb8cd37
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\40\40e11bca0cc66a93ace7588acdb8cd37
+    projectPath: Library\Artifacts\40\40e11bca0cc66a93ace7588acdb8cd37
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\47\475ed46c046e28c440042307bb323fd9
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\47\475ed46c046e28c440042307bb323fd9
+    projectPath: Library\Artifacts\47\475ed46c046e28c440042307bb323fd9
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Library\Artifacts\41\4135422c10dc2f94a74262bb5107320f
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\41\4135422c10dc2f94a74262bb5107320f
-    projectPath: Library\Artifacts\41\4135422c10dc2f94a74262bb5107320f
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\41\417fb0bfbe8fe27ac5f0cb8fd4c246fb
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\41\417fb0bfbe8fe27ac5f0cb8fd4c246fb
-    projectPath: Library\Artifacts\41\417fb0bfbe8fe27ac5f0cb8fd4c246fb
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\52\523b3b16420b0bebe5a4dfb97bc2c5f4
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\52\523b3b16420b0bebe5a4dfb97bc2c5f4
-    projectPath: Library\Artifacts\52\523b3b16420b0bebe5a4dfb97bc2c5f4
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\5b\5b487232f4994cb6094f5106dae7f85a
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\5b\5b487232f4994cb6094f5106dae7f85a
-    projectPath: Library\Artifacts\5b\5b487232f4994cb6094f5106dae7f85a
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\67\671d274b94d1150f05d8b38d98b32cc4
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\67\671d274b94d1150f05d8b38d98b32cc4
-    projectPath: Library\Artifacts\67\671d274b94d1150f05d8b38d98b32cc4
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\69\695a0703bc5deffd566386c2469eff9f
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\69\695a0703bc5deffd566386c2469eff9f
-    projectPath: Library\Artifacts\69\695a0703bc5deffd566386c2469eff9f
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\70\706895213d01447b58749a8eee536845
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\70\706895213d01447b58749a8eee536845
-    projectPath: Library\Artifacts\70\706895213d01447b58749a8eee536845
+  - path: GUI\Library\Artifacts\56\565c9d0e7632515fc9a177523c7748a3
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\56\565c9d0e7632515fc9a177523c7748a3
+    projectPath: Library\Artifacts\56\565c9d0e7632515fc9a177523c7748a3
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Library\Artifacts\71\716b059b54eccb74b870e6c96b4994fa
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\71\716b059b54eccb74b870e6c96b4994fa
-    projectPath: Library\Artifacts\71\716b059b54eccb74b870e6c96b4994fa
+  - path: GUI\Library\Artifacts\56\56b8a19d4bcaeb465c7273487511edf2
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\56\56b8a19d4bcaeb465c7273487511edf2
+    projectPath: Library\Artifacts\56\56b8a19d4bcaeb465c7273487511edf2
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: GUI\Library\Artifacts\77\77c8b83bfc83b0e375d301f8da1413ad
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\77\77c8b83bfc83b0e375d301f8da1413ad
-    projectPath: Library\Artifacts\77\77c8b83bfc83b0e375d301f8da1413ad
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\78\78355dbfa690955031d679f700ffbc5b
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\78\78355dbfa690955031d679f700ffbc5b
-    projectPath: Library\Artifacts\78\78355dbfa690955031d679f700ffbc5b
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\80\80f10a505d4d06500d906d2d5fad42b9
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\80\80f10a505d4d06500d906d2d5fad42b9
-    projectPath: Library\Artifacts\80\80f10a505d4d06500d906d2d5fad42b9
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\89\89bb48aa02849b66328c3a3497d53eed
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\89\89bb48aa02849b66328c3a3497d53eed
-    projectPath: Library\Artifacts\89\89bb48aa02849b66328c3a3497d53eed
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\8b\8ba46a56174f15750aa9c95c2d0ce0d2
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\8b\8ba46a56174f15750aa9c95c2d0ce0d2
-    projectPath: Library\Artifacts\8b\8ba46a56174f15750aa9c95c2d0ce0d2
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\90\90d6f0b8b250a32ca030c1d87d7a1091
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\90\90d6f0b8b250a32ca030c1d87d7a1091
-    projectPath: Library\Artifacts\90\90d6f0b8b250a32ca030c1d87d7a1091
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\99\9996e000cce7ff2acd806f156ce113a9
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\99\9996e000cce7ff2acd806f156ce113a9
-    projectPath: Library\Artifacts\99\9996e000cce7ff2acd806f156ce113a9
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\a9\a97fb61583af6f24a79b8bf005ab4cb9
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\a9\a97fb61583af6f24a79b8bf005ab4cb9
-    projectPath: Library\Artifacts\a9\a97fb61583af6f24a79b8bf005ab4cb9
+  - path: GUI\Library\Artifacts\57\57c3e4d838d33b0e1a60dfb445eefa73
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\57\57c3e4d838d33b0e1a60dfb445eefa73
+    projectPath: Library\Artifacts\57\57c3e4d838d33b0e1a60dfb445eefa73
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Library\Artifacts\b7\b72392ca88dd05d159e251c037cb6057
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\b7\b72392ca88dd05d159e251c037cb6057
-    projectPath: Library\Artifacts\b7\b72392ca88dd05d159e251c037cb6057
+  - path: GUI\Library\Artifacts\58\58a513a10bfb6dcc96df7afe2e20ecfa
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\58\58a513a10bfb6dcc96df7afe2e20ecfa
+    projectPath: Library\Artifacts\58\58a513a10bfb6dcc96df7afe2e20ecfa
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\58\58bea5fc331b1e350ee841be0a79814a
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\58\58bea5fc331b1e350ee841be0a79814a
+    projectPath: Library\Artifacts\58\58bea5fc331b1e350ee841be0a79814a
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\58\58d246a1d1a3073679b98bef5c52930c
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\58\58d246a1d1a3073679b98bef5c52930c
+    projectPath: Library\Artifacts\58\58d246a1d1a3073679b98bef5c52930c
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\5b\5b0b832ffca785c137c237a04771f020
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\5b\5b0b832ffca785c137c237a04771f020
+    projectPath: Library\Artifacts\5b\5b0b832ffca785c137c237a04771f020
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\5b\5b0eb981bac5613e4f3e646929a73b94
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\5b\5b0eb981bac5613e4f3e646929a73b94
+    projectPath: Library\Artifacts\5b\5b0eb981bac5613e4f3e646929a73b94
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Library\Artifacts\c6\c6cc4a5bc1898f4071e96fe9e5a3c297
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\c6\c6cc4a5bc1898f4071e96fe9e5a3c297
-    projectPath: Library\Artifacts\c6\c6cc4a5bc1898f4071e96fe9e5a3c297
+  - path: GUI\Library\Artifacts\5b\5bd2901c74ccc2f58e8617c191b95606
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\5b\5bd2901c74ccc2f58e8617c191b95606
+    projectPath: Library\Artifacts\5b\5bd2901c74ccc2f58e8617c191b95606
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: GUI\Library\Artifacts\c8\c88a7ad36971dafaea2ebc5e318ae898
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\c8\c88a7ad36971dafaea2ebc5e318ae898
-    projectPath: Library\Artifacts\c8\c88a7ad36971dafaea2ebc5e318ae898
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\ce\cea92167b6571fa3e1320244b0b70ef5
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\ce\cea92167b6571fa3e1320244b0b70ef5
-    projectPath: Library\Artifacts\ce\cea92167b6571fa3e1320244b0b70ef5
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\d6\d63a1db915185fce879a8f881792709b
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\d6\d63a1db915185fce879a8f881792709b
-    projectPath: Library\Artifacts\d6\d63a1db915185fce879a8f881792709b
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\d8\d8177dc40099c1d9a1853658c3134aaa
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\d8\d8177dc40099c1d9a1853658c3134aaa
-    projectPath: Library\Artifacts\d8\d8177dc40099c1d9a1853658c3134aaa
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\db\dba35aa67733ffbf0becb004beef96bb
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\db\dba35aa67733ffbf0becb004beef96bb
-    projectPath: Library\Artifacts\db\dba35aa67733ffbf0becb004beef96bb
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\dd\dd7f8140503cb731a0d50fb5dcdc7fcd
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\dd\dd7f8140503cb731a0d50fb5dcdc7fcd
-    projectPath: Library\Artifacts\dd\dd7f8140503cb731a0d50fb5dcdc7fcd
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\de\de3634daaec98f59a074fa89326c17ae
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\de\de3634daaec98f59a074fa89326c17ae
-    projectPath: Library\Artifacts\de\de3634daaec98f59a074fa89326c17ae
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GUI\Library\Artifacts\e6\e6770ad91815f942614c99a113a83d64
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\e6\e6770ad91815f942614c99a113a83d64
-    projectPath: Library\Artifacts\e6\e6770ad91815f942614c99a113a83d64
+  - path: GUI\Library\Artifacts\5d\5d1a740a61340f8d35ef32274a3bbfdc
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\5d\5d1a740a61340f8d35ef32274a3bbfdc
+    projectPath: Library\Artifacts\5d\5d1a740a61340f8d35ef32274a3bbfdc
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Library\Artifacts\fa\fa9f5ceb9ac778beed8e7c5ca63ebb57
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\fa\fa9f5ceb9ac778beed8e7c5ca63ebb57
-    projectPath: Library\Artifacts\fa\fa9f5ceb9ac778beed8e7c5ca63ebb57
+  - path: GUI\Library\Artifacts\66\6661e2b44599279f27d439802b616487
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\66\6661e2b44599279f27d439802b616487
+    projectPath: Library\Artifacts\66\6661e2b44599279f27d439802b616487
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: GUI\Library\Artifacts\69\69799878c03143e6e655645d339cbdcc
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\69\69799878c03143e6e655645d339cbdcc
+    projectPath: Library\Artifacts\69\69799878c03143e6e655645d339cbdcc
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: GUI\Library\Artifacts\6e\6ea12c19a5ad2777337172c1e81834af
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\6e\6ea12c19a5ad2777337172c1e81834af
+    projectPath: Library\Artifacts\6e\6ea12c19a5ad2777337172c1e81834af
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: GUI\Library\Artifacts\fc\fc1b2bcf56928cfc47d9a99e0fd1fe16
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\fc\fc1b2bcf56928cfc47d9a99e0fd1fe16
-    projectPath: Library\Artifacts\fc\fc1b2bcf56928cfc47d9a99e0fd1fe16
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Library\Artifacts\fe\fefea3e26a5880e206efd589c52cc979
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\fe\fefea3e26a5880e206efd589c52cc979
-    projectPath: Library\Artifacts\fe\fefea3e26a5880e206efd589c52cc979
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\Library\CurrentLayout-default.dwlt
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\CurrentLayout-default.dwlt
-    projectPath: Library\CurrentLayout-default.dwlt
+  - path: GUI\Library\Artifacts\6f\6fde542e7dc2b60f930727c479fa1de8
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\6f\6fde542e7dc2b60f930727c479fa1de8
+    projectPath: Library\Artifacts\6f\6fde542e7dc2b60f930727c479fa1de8
     originalPath: 
     indexStatus: 0
-    workTreeStatus: 3
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\75\757be3cf798a58690c21891c4b384340
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\75\757be3cf798a58690c21891c4b384340
+    projectPath: Library\Artifacts\75\757be3cf798a58690c21891c4b384340
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\75\75f9ad4df09acb445c55c867f48a5c6f
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\75\75f9ad4df09acb445c55c867f48a5c6f
+    projectPath: Library\Artifacts\75\75f9ad4df09acb445c55c867f48a5c6f
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\7b\7b962fb272025a48c82bf216b87bbaba
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\7b\7b962fb272025a48c82bf216b87bbaba
+    projectPath: Library\Artifacts\7b\7b962fb272025a48c82bf216b87bbaba
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\7d\7d58583641f01a3cfee44ebd98a9635e
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\7d\7d58583641f01a3cfee44ebd98a9635e
+    projectPath: Library\Artifacts\7d\7d58583641f01a3cfee44ebd98a9635e
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\7f\7f26aa7fe95961a53ba4b8938c7e85ca
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\7f\7f26aa7fe95961a53ba4b8938c7e85ca
+    projectPath: Library\Artifacts\7f\7f26aa7fe95961a53ba4b8938c7e85ca
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\84\847c7fa6f2e5bcc38568bba24cc9f505
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\84\847c7fa6f2e5bcc38568bba24cc9f505
+    projectPath: Library\Artifacts\84\847c7fa6f2e5bcc38568bba24cc9f505
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\89\897ebe23fe69996e198a836dd11fcf12
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\89\897ebe23fe69996e198a836dd11fcf12
+    projectPath: Library\Artifacts\89\897ebe23fe69996e198a836dd11fcf12
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\8b\8bf420c4f9e685703c268eb733c4f059
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\8b\8bf420c4f9e685703c268eb733c4f059
+    projectPath: Library\Artifacts\8b\8bf420c4f9e685703c268eb733c4f059
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\9a\9ab0289ccae510889f1487e920a254a9
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\9a\9ab0289ccae510889f1487e920a254a9
+    projectPath: Library\Artifacts\9a\9ab0289ccae510889f1487e920a254a9
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\9f\9fd45ee74919ebdf7820df124882844d
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\9f\9fd45ee74919ebdf7820df124882844d
+    projectPath: Library\Artifacts\9f\9fd45ee74919ebdf7820df124882844d
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\a3\a3e4767b7539bc42a0272f71a5d724f5
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\a3\a3e4767b7539bc42a0272f71a5d724f5
+    projectPath: Library\Artifacts\a3\a3e4767b7539bc42a0272f71a5d724f5
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\b1\b1af07c0478b36d6c749f5c7ae3aed7b
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\b1\b1af07c0478b36d6c749f5c7ae3aed7b
+    projectPath: Library\Artifacts\b1\b1af07c0478b36d6c749f5c7ae3aed7b
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\b7\b7c1235e76d578a7de744099117731fb
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\b7\b7c1235e76d578a7de744099117731fb
+    projectPath: Library\Artifacts\b7\b7c1235e76d578a7de744099117731fb
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\bb\bbd09fe33be742117ec376645c65e719
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\bb\bbd09fe33be742117ec376645c65e719
+    projectPath: Library\Artifacts\bb\bbd09fe33be742117ec376645c65e719
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\bd\bda7212539436a0d7de5af50f5d8e301
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\bd\bda7212539436a0d7de5af50f5d8e301
+    projectPath: Library\Artifacts\bd\bda7212539436a0d7de5af50f5d8e301
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\c1\c1db20e21a36e6b476d693220cf7c202
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\c1\c1db20e21a36e6b476d693220cf7c202
+    projectPath: Library\Artifacts\c1\c1db20e21a36e6b476d693220cf7c202
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\c9\c9b1c51671dabbc3802fd4b916f50537
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\c9\c9b1c51671dabbc3802fd4b916f50537
+    projectPath: Library\Artifacts\c9\c9b1c51671dabbc3802fd4b916f50537
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\d1\d16d3ed9aed53cabd771f19963d5b902
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\d1\d16d3ed9aed53cabd771f19963d5b902
+    projectPath: Library\Artifacts\d1\d16d3ed9aed53cabd771f19963d5b902
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\db\dbceeb165953b22162669da0cedc34ed
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\db\dbceeb165953b22162669da0cedc34ed
+    projectPath: Library\Artifacts\db\dbceeb165953b22162669da0cedc34ed
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\df\df499bd3e3182a229fba15f1b5a5aca7
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\df\df499bd3e3182a229fba15f1b5a5aca7
+    projectPath: Library\Artifacts\df\df499bd3e3182a229fba15f1b5a5aca7
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\e3\e35dc7b0eac20d679ab1475b77153ce8
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\e3\e35dc7b0eac20d679ab1475b77153ce8
+    projectPath: Library\Artifacts\e3\e35dc7b0eac20d679ab1475b77153ce8
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\e5\e5f434d574b61058e93a799884cd9d5d
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\e5\e5f434d574b61058e93a799884cd9d5d
+    projectPath: Library\Artifacts\e5\e5f434d574b61058e93a799884cd9d5d
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\ea\ea0cccf2f8316addf8cb573d9eb2bf4b
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\ea\ea0cccf2f8316addf8cb573d9eb2bf4b
+    projectPath: Library\Artifacts\ea\ea0cccf2f8316addf8cb573d9eb2bf4b
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\f3\f31ee3040d098d7105c11ccf7ddb8a1a
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\f3\f31ee3040d098d7105c11ccf7ddb8a1a
+    projectPath: Library\Artifacts\f3\f31ee3040d098d7105c11ccf7ddb8a1a
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\f5\f578175b7b610d0f39f1cda45fa1bda0
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\f5\f578175b7b610d0f39f1cda45fa1bda0
+    projectPath: Library\Artifacts\f5\f578175b7b610d0f39f1cda45fa1bda0
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: GUI\Library\Artifacts\f7\f7c3dccb87fe3bce1546fba2b4a43e36
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\f7\f7c3dccb87fe3bce1546fba2b4a43e36
+    projectPath: Library\Artifacts\f7\f7c3dccb87fe3bce1546fba2b4a43e36
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\f9\f940d6955329f627a08c586798357395
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\f9\f940d6955329f627a08c586798357395
+    projectPath: Library\Artifacts\f9\f940d6955329f627a08c586798357395
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: GUI\Library\Artifacts\fe\fe49fd829bc25d5ec2871420f566bf59
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\fe\fe49fd829bc25d5ec2871420f566bf59
+    projectPath: Library\Artifacts\fe\fe49fd829bc25d5ec2871420f566bf59
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\Artifacts\ff\ffe9a381c8d3aea7d064da3c3247ab6e
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\Artifacts\ff\ffe9a381c8d3aea7d064da3c3247ab6e
+    projectPath: Library\Artifacts\ff\ffe9a381c8d3aea7d064da3c3247ab6e
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
   - path: GUI\Library\EditorInstance.json
     fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\EditorInstance.json
     projectPath: Library\EditorInstance.json
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Library\EditorUserBuildSettings.asset
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\EditorUserBuildSettings.asset
-    projectPath: Library\EditorUserBuildSettings.asset
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: GUI\Library\gfu\cache\gitlocks.yaml
     fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\gfu\cache\gitlocks.yaml
     projectPath: Library\gfu\cache\gitlocks.yaml
@@ -455,6 +430,138 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: GUI\Library\InspectorExpandedItems.asset
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\InspectorExpandedItems.asset
+    projectPath: Library\InspectorExpandedItems.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\LICENSE
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\LICENSE
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\LICENSE
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\LICENSE.meta
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\LICENSE.meta
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\LICENSE.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\package.json
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\package.json
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\package.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\package.json.meta
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\package.json.meta
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\package.json.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\README.md
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\README.md
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\README.md
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\README.md.meta
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\README.md.meta
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\README.md.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners.meta
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners.meta
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ImageWithIndependentRoundedCorners.cs
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ImageWithIndependentRoundedCorners.cs
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ImageWithIndependentRoundedCorners.cs
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ImageWithIndependentRoundedCorners.cs.meta
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ImageWithIndependentRoundedCorners.cs.meta
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ImageWithIndependentRoundedCorners.cs.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ImageWithRoundedCorners.cs
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ImageWithRoundedCorners.cs
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ImageWithRoundedCorners.cs
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ImageWithRoundedCorners.cs.meta
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ImageWithRoundedCorners.cs.meta
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ImageWithRoundedCorners.cs.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\IndependentRoundedCorners.shader
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\IndependentRoundedCorners.shader
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\IndependentRoundedCorners.shader
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\IndependentRoundedCorners.shader.meta
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\IndependentRoundedCorners.shader.meta
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\IndependentRoundedCorners.shader.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\Nobi.UiRoundedCorners.asmdef
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\Nobi.UiRoundedCorners.asmdef
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\Nobi.UiRoundedCorners.asmdef
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\Nobi.UiRoundedCorners.asmdef.meta
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\Nobi.UiRoundedCorners.asmdef.meta
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\Nobi.UiRoundedCorners.asmdef.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\RoundedCorners.shader
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\RoundedCorners.shader
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\RoundedCorners.shader
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\RoundedCorners.shader.meta
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\RoundedCorners.shader.meta
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\RoundedCorners.shader.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\SDFUtils.cginc
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\SDFUtils.cginc
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\SDFUtils.cginc
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\SDFUtils.cginc.meta
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\SDFUtils.cginc.meta
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\SDFUtils.cginc.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ShaderSetup.cginc
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ShaderSetup.cginc
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ShaderSetup.cginc
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ShaderSetup.cginc.meta
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ShaderSetup.cginc.meta
+    projectPath: Library\PackageCache\com.nobi.roundedcorners@41cb54a5d2\UiRoundedCorners\ShaderSetup.cginc.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
   - path: GUI\Library\PackageManager\ProjectCache.bin
     fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\PackageManager\ProjectCache.bin
     projectPath: Library\PackageManager\ProjectCache.bin
@@ -467,171 +574,21 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Assembly-CSharp.dll
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Assembly-CSharp.dll
-    projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
+  - path: GUI\Library\ScriptAssemblies\Nobi.UiRoundedCorners.dll
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Nobi.UiRoundedCorners.dll
+    projectPath: Library\ScriptAssemblies\Nobi.UiRoundedCorners.dll
     originalPath: 
     indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Assembly-CSharp.pdb
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Assembly-CSharp.pdb
-    projectPath: Library\ScriptAssemblies\Assembly-CSharp.pdb
+    workTreeStatus: 5
+  - path: GUI\Library\ScriptAssemblies\Nobi.UiRoundedCorners.pdb
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Nobi.UiRoundedCorners.pdb
+    projectPath: Library\ScriptAssemblies\Nobi.UiRoundedCorners.pdb
     originalPath: 
     indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
-    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.pdb
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.pdb
-    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.pdb
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-    projectPath: Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Unity.CollabProxy.Editor.pdb
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Unity.CollabProxy.Editor.pdb
-    projectPath: Library\ScriptAssemblies\Unity.CollabProxy.Editor.pdb
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-    projectPath: Library\ScriptAssemblies\Unity.Rider.Editor.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Unity.Rider.Editor.pdb
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Unity.Rider.Editor.pdb
-    projectPath: Library\ScriptAssemblies\Unity.Rider.Editor.pdb
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.pdb
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.pdb
-    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.Editor.pdb
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Unity.TextMeshPro.pdb
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Unity.TextMeshPro.pdb
-    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.pdb
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Unity.Timeline.dll
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Unity.Timeline.dll
-    projectPath: Library\ScriptAssemblies\Unity.Timeline.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-    projectPath: Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Unity.Timeline.Editor.pdb
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Unity.Timeline.Editor.pdb
-    projectPath: Library\ScriptAssemblies\Unity.Timeline.Editor.pdb
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Unity.Timeline.pdb
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Unity.Timeline.pdb
-    projectPath: Library\ScriptAssemblies\Unity.Timeline.pdb
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-    projectPath: Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Unity.VisualStudio.Editor.pdb
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Unity.VisualStudio.Editor.pdb
-    projectPath: Library\ScriptAssemblies\Unity.VisualStudio.Editor.pdb
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-    projectPath: Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\Unity.VSCode.Editor.pdb
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\Unity.VSCode.Editor.pdb
-    projectPath: Library\ScriptAssemblies\Unity.VSCode.Editor.pdb
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-    projectPath: Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\UnityEditor.TestRunner.pdb
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\UnityEditor.TestRunner.pdb
-    projectPath: Library\ScriptAssemblies\UnityEditor.TestRunner.pdb
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\UnityEditor.UI.dll
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\UnityEditor.UI.dll
-    projectPath: Library\ScriptAssemblies\UnityEditor.UI.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\UnityEditor.UI.pdb
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\UnityEditor.UI.pdb
-    projectPath: Library\ScriptAssemblies\UnityEditor.UI.pdb
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-    projectPath: Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\UnityEngine.TestRunner.pdb
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\UnityEngine.TestRunner.pdb
-    projectPath: Library\ScriptAssemblies\UnityEngine.TestRunner.pdb
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\UnityEngine.UI.dll
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\UnityEngine.UI.dll
-    projectPath: Library\ScriptAssemblies\UnityEngine.UI.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\Library\ScriptAssemblies\UnityEngine.UI.pdb
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ScriptAssemblies\UnityEngine.UI.pdb
-    projectPath: Library\ScriptAssemblies\UnityEngine.UI.pdb
+    workTreeStatus: 5
+  - path: GUI\Library\ShaderCache\EditorEncounteredVariants
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\ShaderCache\EditorEncounteredVariants
+    projectPath: Library\ShaderCache\EditorEncounteredVariants
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -641,9 +598,45 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: GUI\Library\shadercompiler-UnityShaderCompiler.exe1.log
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\shadercompiler-UnityShaderCompiler.exe1.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe1.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: GUI\Library\shadercompiler-UnityShaderCompiler.exe2.log
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\shadercompiler-UnityShaderCompiler.exe2.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe2.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: GUI\Library\shadercompiler-UnityShaderCompiler.exe3.log
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\shadercompiler-UnityShaderCompiler.exe3.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe3.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: GUI\Library\shadercompiler-UnityShaderCompiler.exe4.log
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\shadercompiler-UnityShaderCompiler.exe4.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe4.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: GUI\Library\shadercompiler-UnityShaderCompiler.exe5.log
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\shadercompiler-UnityShaderCompiler.exe5.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe5.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: GUI\Library\SourceAssetDB
     fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\SourceAssetDB
     projectPath: Library\SourceAssetDB
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: GUI\Library\SourceAssetDB-lock
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\SourceAssetDB-lock
+    projectPath: Library\SourceAssetDB-lock
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -653,114 +646,30 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: GUI\Library\StateCache\SceneView\30\30da789535fce0d9f08cd9babb9791ca.json
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Library\StateCache\SceneView\30\30da789535fce0d9f08cd9babb9791ca.json
-    projectPath: Library\StateCache\SceneView\30\30da789535fce0d9f08cd9babb9791ca.json
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GUI\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
-    projectPath: obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: GUI\obj\Debug\Assembly-CSharp.Player.csprojAssemblyReference.cache
     fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\Assembly-CSharp.Player.csprojAssemblyReference.cache
     projectPath: obj\Debug\Assembly-CSharp.Player.csprojAssemblyReference.cache
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\obj\Debug\Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache
-    projectPath: obj\Debug\Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: GUI\Packages\manifest.json
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Packages\manifest.json
+    projectPath: Packages\manifest.json
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
-    projectPath: obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: GUI\Packages\packages-lock.json
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Packages\packages-lock.json
+    projectPath: Packages\packages-lock.json
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\obj\Debug\Unity.CollabProxy.Editor.csprojAssemblyReference.cache
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\Unity.CollabProxy.Editor.csprojAssemblyReference.cache
-    projectPath: obj\Debug\Unity.CollabProxy.Editor.csprojAssemblyReference.cache
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: GUI\Packages\ui-rounded-corners-v201.unitypackage
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Packages\ui-rounded-corners-v201.unitypackage
+    projectPath: Packages\ui-rounded-corners-v201.unitypackage
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\obj\Debug\Unity.Rider.Editor.csprojAssemblyReference.cache
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\Unity.Rider.Editor.csprojAssemblyReference.cache
-    projectPath: obj\Debug\Unity.Rider.Editor.csprojAssemblyReference.cache
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\obj\Debug\Unity.TextMeshPro.csprojAssemblyReference.cache
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\Unity.TextMeshPro.csprojAssemblyReference.cache
-    projectPath: obj\Debug\Unity.TextMeshPro.csprojAssemblyReference.cache
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\obj\Debug\Unity.TextMeshPro.Editor.csprojAssemblyReference.cache
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\Unity.TextMeshPro.Editor.csprojAssemblyReference.cache
-    projectPath: obj\Debug\Unity.TextMeshPro.Editor.csprojAssemblyReference.cache
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\obj\Debug\Unity.TextMeshPro.Player.csprojAssemblyReference.cache
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\Unity.TextMeshPro.Player.csprojAssemblyReference.cache
-    projectPath: obj\Debug\Unity.TextMeshPro.Player.csprojAssemblyReference.cache
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\obj\Debug\Unity.Timeline.csprojAssemblyReference.cache
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\Unity.Timeline.csprojAssemblyReference.cache
-    projectPath: obj\Debug\Unity.Timeline.csprojAssemblyReference.cache
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\obj\Debug\Unity.Timeline.Player.csprojAssemblyReference.cache
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\Unity.Timeline.Player.csprojAssemblyReference.cache
-    projectPath: obj\Debug\Unity.Timeline.Player.csprojAssemblyReference.cache
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\obj\Debug\Unity.VisualStudio.Editor.csprojAssemblyReference.cache
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\Unity.VisualStudio.Editor.csprojAssemblyReference.cache
-    projectPath: obj\Debug\Unity.VisualStudio.Editor.csprojAssemblyReference.cache
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\obj\Debug\Unity.VSCode.Editor.csprojAssemblyReference.cache
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\Unity.VSCode.Editor.csprojAssemblyReference.cache
-    projectPath: obj\Debug\Unity.VSCode.Editor.csprojAssemblyReference.cache
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\obj\Debug\UnityEngine.TestRunner.csprojAssemblyReference.cache
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\UnityEngine.TestRunner.csprojAssemblyReference.cache
-    projectPath: obj\Debug\UnityEngine.TestRunner.csprojAssemblyReference.cache
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\obj\Debug\UnityEngine.TestRunner.Player.csprojAssemblyReference.cache
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\UnityEngine.TestRunner.Player.csprojAssemblyReference.cache
-    projectPath: obj\Debug\UnityEngine.TestRunner.Player.csprojAssemblyReference.cache
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\obj\Debug\UnityEngine.UI.csprojAssemblyReference.cache
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\UnityEngine.UI.csprojAssemblyReference.cache
-    projectPath: obj\Debug\UnityEngine.UI.csprojAssemblyReference.cache
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GUI\obj\Debug\UnityEngine.UI.Player.csprojAssemblyReference.cache
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\obj\Debug\UnityEngine.UI.Player.csprojAssemblyReference.cache
-    projectPath: obj\Debug\UnityEngine.UI.Player.csprojAssemblyReference.cache
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: GUI\Temp\__Backupscenes\0.backup
     fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\__Backupscenes\0.backup
     projectPath: Temp\__Backupscenes\0.backup
@@ -773,153 +682,177 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Temp\UnityTempFile-17cc53b4cb66b1b47b5e9fc393ce6ded
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-17cc53b4cb66b1b47b5e9fc393ce6ded
-    projectPath: Temp\UnityTempFile-17cc53b4cb66b1b47b5e9fc393ce6ded
+  - path: GUI\Temp\UnityTempFile-009d190a6adcfe54f918d2e01d0e9964
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-009d190a6adcfe54f918d2e01d0e9964
+    projectPath: Temp\UnityTempFile-009d190a6adcfe54f918d2e01d0e9964
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Temp\UnityTempFile-47a5b3df009531c40ade634847e0f9e4
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-47a5b3df009531c40ade634847e0f9e4
-    projectPath: Temp\UnityTempFile-47a5b3df009531c40ade634847e0f9e4
+  - path: GUI\Temp\UnityTempFile-03e783fa5591902449085069e25a9da0
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-03e783fa5591902449085069e25a9da0
+    projectPath: Temp\UnityTempFile-03e783fa5591902449085069e25a9da0
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Temp\UnityTempFile-5dd856f449736b04abe387bf7eeadf90
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-5dd856f449736b04abe387bf7eeadf90
-    projectPath: Temp\UnityTempFile-5dd856f449736b04abe387bf7eeadf90
+  - path: GUI\Temp\UnityTempFile-096f9cda3847a6e478092802ccc57d6a
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-096f9cda3847a6e478092802ccc57d6a
+    projectPath: Temp\UnityTempFile-096f9cda3847a6e478092802ccc57d6a
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Temp\UnityTempFile-6e01fc301e21bc04382503296319d852
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-6e01fc301e21bc04382503296319d852
-    projectPath: Temp\UnityTempFile-6e01fc301e21bc04382503296319d852
+  - path: GUI\Temp\UnityTempFile-0c321268a3d8b9e4b95d84594c7c3915
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-0c321268a3d8b9e4b95d84594c7c3915
+    projectPath: Temp\UnityTempFile-0c321268a3d8b9e4b95d84594c7c3915
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Temp\UnityTempFile-72bcdf96a588ec54ab1035d946291bf4
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-72bcdf96a588ec54ab1035d946291bf4
-    projectPath: Temp\UnityTempFile-72bcdf96a588ec54ab1035d946291bf4
+  - path: GUI\Temp\UnityTempFile-1f7f8ddd9cf23584e81874c970c73ccd
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-1f7f8ddd9cf23584e81874c970c73ccd
+    projectPath: Temp\UnityTempFile-1f7f8ddd9cf23584e81874c970c73ccd
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Temp\UnityTempFile-7e0b3f4fbd64dcd429584c89d73fa2b3
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-7e0b3f4fbd64dcd429584c89d73fa2b3
-    projectPath: Temp\UnityTempFile-7e0b3f4fbd64dcd429584c89d73fa2b3
+  - path: GUI\Temp\UnityTempFile-254fbd3d3e1e45e4fae7b5848ebb217f
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-254fbd3d3e1e45e4fae7b5848ebb217f
+    projectPath: Temp\UnityTempFile-254fbd3d3e1e45e4fae7b5848ebb217f
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Temp\UnityTempFile-90a8197be0eb2f048954e5f5065cc544
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-90a8197be0eb2f048954e5f5065cc544
-    projectPath: Temp\UnityTempFile-90a8197be0eb2f048954e5f5065cc544
+  - path: GUI\Temp\UnityTempFile-267c72c7f6ca7a0499d087589e430c04
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-267c72c7f6ca7a0499d087589e430c04
+    projectPath: Temp\UnityTempFile-267c72c7f6ca7a0499d087589e430c04
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Temp\UnityTempFile-c09d9128d2372f846befefedaa99aed5
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-c09d9128d2372f846befefedaa99aed5
-    projectPath: Temp\UnityTempFile-c09d9128d2372f846befefedaa99aed5
+  - path: GUI\Temp\UnityTempFile-409b6f459140c324ba6f6b780893eb2f
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-409b6f459140c324ba6f6b780893eb2f
+    projectPath: Temp\UnityTempFile-409b6f459140c324ba6f6b780893eb2f
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Temp\UnityTempFile-f6e9bbfde1978d047975974db7e41a0e
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-f6e9bbfde1978d047975974db7e41a0e
-    projectPath: Temp\UnityTempFile-f6e9bbfde1978d047975974db7e41a0e
+  - path: GUI\Temp\UnityTempFile-4598599410532904ca5b2abc722feb38
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-4598599410532904ca5b2abc722feb38
+    projectPath: Temp\UnityTempFile-4598599410532904ca5b2abc722feb38
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Unity.CollabProxy.Editor.csproj
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Unity.CollabProxy.Editor.csproj
-    projectPath: Unity.CollabProxy.Editor.csproj
+  - path: GUI\Temp\UnityTempFile-5b6114932bbfdd54aa4f2e998118bd3d
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-5b6114932bbfdd54aa4f2e998118bd3d
+    projectPath: Temp\UnityTempFile-5b6114932bbfdd54aa4f2e998118bd3d
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Unity.Rider.Editor.csproj
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Unity.Rider.Editor.csproj
-    projectPath: Unity.Rider.Editor.csproj
+  - path: GUI\Temp\UnityTempFile-679a185a4f807ca409783e3a32c6aefd
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-679a185a4f807ca409783e3a32c6aefd
+    projectPath: Temp\UnityTempFile-679a185a4f807ca409783e3a32c6aefd
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Unity.TextMeshPro.csproj
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Unity.TextMeshPro.csproj
-    projectPath: Unity.TextMeshPro.csproj
+  - path: GUI\Temp\UnityTempFile-6895b10f046eec942a493a6999fea18d
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-6895b10f046eec942a493a6999fea18d
+    projectPath: Temp\UnityTempFile-6895b10f046eec942a493a6999fea18d
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Unity.TextMeshPro.Editor.csproj
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Unity.TextMeshPro.Editor.csproj
-    projectPath: Unity.TextMeshPro.Editor.csproj
+  - path: GUI\Temp\UnityTempFile-7e4d18fdeff47384f9763927b5276478
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-7e4d18fdeff47384f9763927b5276478
+    projectPath: Temp\UnityTempFile-7e4d18fdeff47384f9763927b5276478
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Unity.TextMeshPro.Player.csproj
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Unity.TextMeshPro.Player.csproj
-    projectPath: Unity.TextMeshPro.Player.csproj
+  - path: GUI\Temp\UnityTempFile-8487aff9c9163404da2287d778335747
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-8487aff9c9163404da2287d778335747
+    projectPath: Temp\UnityTempFile-8487aff9c9163404da2287d778335747
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Unity.Timeline.csproj
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Unity.Timeline.csproj
-    projectPath: Unity.Timeline.csproj
+  - path: GUI\Temp\UnityTempFile-85368de11ecbc074eb659c3aa5202855
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-85368de11ecbc074eb659c3aa5202855
+    projectPath: Temp\UnityTempFile-85368de11ecbc074eb659c3aa5202855
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Unity.Timeline.Editor.csproj
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Unity.Timeline.Editor.csproj
-    projectPath: Unity.Timeline.Editor.csproj
+  - path: GUI\Temp\UnityTempFile-8a1fee204208b9046854aea19161bf8b
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-8a1fee204208b9046854aea19161bf8b
+    projectPath: Temp\UnityTempFile-8a1fee204208b9046854aea19161bf8b
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Unity.Timeline.Player.csproj
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Unity.Timeline.Player.csproj
-    projectPath: Unity.Timeline.Player.csproj
+  - path: GUI\Temp\UnityTempFile-957089ebff4f25c40a60f7521ec5ce8f
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-957089ebff4f25c40a60f7521ec5ce8f
+    projectPath: Temp\UnityTempFile-957089ebff4f25c40a60f7521ec5ce8f
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Unity.VisualStudio.Editor.csproj
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Unity.VisualStudio.Editor.csproj
-    projectPath: Unity.VisualStudio.Editor.csproj
+  - path: GUI\Temp\UnityTempFile-9a7e0b3afa60b714695663e3fd163112
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-9a7e0b3afa60b714695663e3fd163112
+    projectPath: Temp\UnityTempFile-9a7e0b3afa60b714695663e3fd163112
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\Unity.VSCode.Editor.csproj
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Unity.VSCode.Editor.csproj
-    projectPath: Unity.VSCode.Editor.csproj
+  - path: GUI\Temp\UnityTempFile-9a93f01a2f3bef44daf3a1ca3156d13e
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-9a93f01a2f3bef44daf3a1ca3156d13e
+    projectPath: Temp\UnityTempFile-9a93f01a2f3bef44daf3a1ca3156d13e
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\UnityEditor.TestRunner.csproj
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\UnityEditor.TestRunner.csproj
-    projectPath: UnityEditor.TestRunner.csproj
+  - path: GUI\Temp\UnityTempFile-9ef817033cd5ce74d911daffdae37258
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-9ef817033cd5ce74d911daffdae37258
+    projectPath: Temp\UnityTempFile-9ef817033cd5ce74d911daffdae37258
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\UnityEditor.UI.csproj
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\UnityEditor.UI.csproj
-    projectPath: UnityEditor.UI.csproj
+  - path: GUI\Temp\UnityTempFile-a06ffcb79c2e36743899fedb822e1272
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-a06ffcb79c2e36743899fedb822e1272
+    projectPath: Temp\UnityTempFile-a06ffcb79c2e36743899fedb822e1272
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\UnityEngine.TestRunner.csproj
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\UnityEngine.TestRunner.csproj
-    projectPath: UnityEngine.TestRunner.csproj
+  - path: GUI\Temp\UnityTempFile-b694564b253e9af4dbff5615fe5a6269
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-b694564b253e9af4dbff5615fe5a6269
+    projectPath: Temp\UnityTempFile-b694564b253e9af4dbff5615fe5a6269
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\UnityEngine.TestRunner.Player.csproj
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\UnityEngine.TestRunner.Player.csproj
-    projectPath: UnityEngine.TestRunner.Player.csproj
+  - path: GUI\Temp\UnityTempFile-bfc15d9263b4d324a8c73ffadeac5b4b
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-bfc15d9263b4d324a8c73ffadeac5b4b
+    projectPath: Temp\UnityTempFile-bfc15d9263b4d324a8c73ffadeac5b4b
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\UnityEngine.UI.csproj
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\UnityEngine.UI.csproj
-    projectPath: UnityEngine.UI.csproj
+  - path: GUI\Temp\UnityTempFile-c10a9b1d7aa91f148b5e847d85eb1f00
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-c10a9b1d7aa91f148b5e847d85eb1f00
+    projectPath: Temp\UnityTempFile-c10a9b1d7aa91f148b5e847d85eb1f00
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GUI\UnityEngine.UI.Player.csproj
-    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\UnityEngine.UI.Player.csproj
-    projectPath: UnityEngine.UI.Player.csproj
+  - path: GUI\Temp\UnityTempFile-cdadd9811359c174188e7052cc7e9636
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-cdadd9811359c174188e7052cc7e9636
+    projectPath: Temp\UnityTempFile-cdadd9811359c174188e7052cc7e9636
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: GUI\Temp\UnityTempFile-ce5835df79cdf8c48841c308240ab044
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-ce5835df79cdf8c48841c308240ab044
+    projectPath: Temp\UnityTempFile-ce5835df79cdf8c48841c308240ab044
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: GUI\Temp\UnityTempFile-df3037868ce07b441b0e3438aaa01f5a
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-df3037868ce07b441b0e3438aaa01f5a
+    projectPath: Temp\UnityTempFile-df3037868ce07b441b0e3438aaa01f5a
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: GUI\Temp\UnityTempFile-e59129cdae1b4894e86ae1b94c452d39
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-e59129cdae1b4894e86ae1b94c452d39
+    projectPath: Temp\UnityTempFile-e59129cdae1b4894e86ae1b94c452d39
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: GUI\Temp\UnityTempFile-e9a36daae9c5faf43b1140d34275dc27
+    fullPath: F:\Taschi\Documents\Hackathon\UpdateDeutschland\Repository\UpdateDeutschland\GUI\Temp\UnityTempFile-e9a36daae9c5faf43b1140d34275dc27
+    projectPath: Temp\UnityTempFile-e9a36daae9c5faf43b1140d34275dc27
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
