@@ -1,21 +1,28 @@
 
 #include "MPU9250.h"
 #include <Arduino.h>
+#include "SPI.h"
 #include <Wire.h>
 #include <ESP8266WiFi.h>
-#include <MQTT.h>
+#include <PubSubClient.h>
 
 
-const char ssid[] = "ssid";
-const char pass[] = "pass";
+const char* ssid = "GATEWAY49";
+const char* pass = "Ready2start";
 
+const char mqtt_Host[] = "192.168.3.31";
+const int mqtt_Port = 1883;
+const char* mqtt_User = "user";
+const char* mqtt_Password = "user";
 
 WiFiClient net;
-MQTTClient client;
+PubSubClient client(net);
 
 MPU9250 IMU(Wire,0x68);
 
 int status;
+
+
 
 unsigned long lastMillis = 0;
 
@@ -26,42 +33,61 @@ void connect() {
     delay(1000);
   }
 
-  Serial.print("\nconnecting...");
-  while (!client.connect("arduino", "public", "public")) {
-    Serial.print(".");
-    delay(1000);
+  Serial.println("\nconnected!");
+}
+
+void callback(char* topic, byte* payload, int length) {
+
+  Serial.print("Message received in topic: ");
+  Serial.print(topic);
+  Serial.print("   length is:");
+  Serial.println(length);
+
+  Serial.print("Data Received From Broker:");
+  for (int i = 0; i < length; i++) {
+    Serial.print((char)payload[i]);
   }
 
-  Serial.println("\nconnected!");
+  Serial.println();
+  Serial.println("-----------------------");
+  Serial.println();
 
-  client.subscribe("/hello");
-  // client.unsubscribe("/hello");
 }
-
-void messageReceived(String &topic, String &payload) {
-  Serial.println("incoming: " + topic + " - " + payload);
-
-  // Note: Do not use the client in the callback to publish, subscribe or
-  // unsubscribe as it may cause deadlocks when other things arrive while
-  // sending and receiving acknowledgments. Instead, change a global variable,
-  // or push to a queue and handle it in the loop after calling `client.loop()`.
-}
-
 
 void setup() {
   Serial.begin(9600);
+  while(!Serial) {}
 
   WiFi.begin(ssid, pass);
 
-  client.begin("public.cloud.shiftr.io", net);
-  client.onMessage(messageReceived);
-
   connect();
+  client.setServer(mqtt_Host, mqtt_Port);
+  client.setCallback(callback);
+
+  while (!client.connected()) {
+    Serial.println("Connecting to MQTT...");
+
+    if (client.connect("ESP32Client", mqtt_User, mqtt_Password ))
+    {
+
+      Serial.println("connected to MQTT broker");
+
+    }
+    else
+    {
+
+      Serial.print("failed with state ");
+      Serial.print(client.state());
+      delay(500);
+
+    }
+  }
+
 
   Wire.begin(0,2);
   // serial to display data
 
-  while(!Serial) {}
+
 
   // start communication with IMU 
   status = IMU.begin();
@@ -80,20 +106,44 @@ void setup() {
   IMU.setDlpfBandwidth(MPU9250::DLPF_BANDWIDTH_20HZ);
   // setting SRD to 19 for a 50 Hz update rate
   IMU.setSrd(19);
+  
 }
 
-void loop() {
+//void getStrData(char* buffer) {
+//    dtostrf(IMU.getAccelX_mss(), 6, 5, buffer);
+//}
 
+void loop() {
   client.loop();
-  delay(10);  // <- fixes some issues with WiFi stability
 
   if (!client.connected()) {
-    connect();
+    Serial.println("error");
+    //connect();
   }
 
+
+  delay(10);  // <- fixes some issues with WiFi stability
+  
   // publish a message roughly every second.
-  if (millis() - lastMillis > 200) {
+  if (millis() - lastMillis > 100) {
     lastMillis = millis();
+    
+    IMU.readSensor();
+
+    char buffer[6];
+    dtostrf(IMU.getAccelX_mss(), 6, 5, buffer);
+    client.publish("/AccelX", buffer);
+    dtostrf(IMU.getAccelY_mss(), 6, 5, buffer);
+    client.publish("/AccelY", buffer);
+    dtostrf(IMU.getAccelZ_mss(), 6, 5, buffer);
+    client.publish("/AccelZ", buffer);
+    dtostrf(IMU.getGyroX_rads(), 6, 5, buffer);
+    client.publish("/GyroX", buffer);
+    dtostrf(IMU.getGyroY_rads(), 6, 5, buffer);
+    client.publish("/GyroY", buffer);
+    dtostrf(IMU.getGyroZ_rads(), 6, 5, buffer);
+    client.publish("/GyroZ", buffer);
+    /*
     IMU.readSensor(); // read the sensor
 
     // display the data
@@ -116,7 +166,11 @@ void loop() {
     Serial.print(IMU.getMagZ_uT(),6);
     Serial.print("\t");
     Serial.println(IMU.getTemperature_C(),6);
-    //client.publish("/hello", "world");
+    */
+    //char buffer[7];
+    //getStrData(buffer);
+    //client.publish("/AccelX", String(1234));
+    
   }
 
 }
