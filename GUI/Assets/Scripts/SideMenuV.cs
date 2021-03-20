@@ -60,6 +60,10 @@ public class SideMenuV : MonoBehaviour
     public GameObject SecondTraining_Button;
     public GameObject ThirdTraining_Button;
 
+    //Animations
+    public Animator Start_Animation;
+    public Animator Communication_Animation;
+
 
 
 
@@ -180,7 +184,8 @@ public class SideMenuV : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Keypad5))
         {
             Debug.Log("confirm.");
-            switch(lastSelectedButton.name){
+            
+            switch (lastSelectedButton.name){
                 case "Help_Button":
                     Help_Screen.SetActive(true);
                     recolorAllBackgrounds(colorHelp);
@@ -197,12 +202,14 @@ public class SideMenuV : MonoBehaviour
                     Communication_Screen.SetActive(true);
                     recolorAllBackgrounds(colorCommunication);
                     changeButton(LeaveCommunication_Button);
+                    slidePanelsEntry(Communication_Animation);
                     currentPanel = 3;
                     break;
                 case "LeaveCommunication_Button":
-                    Communication_Screen.SetActive(false);
                     recolorAllBackgrounds(colorStartScreen);
+                    slidePanelsExit(Communication_Animation);
                     changeButton(Communication_Button);
+                    Communication_Screen.SetActive(false);
                     currentPanel = 1;
                     break;
                 case "Entertainment_Button":
@@ -313,6 +320,23 @@ public class SideMenuV : MonoBehaviour
         newColor.a = 1f;
         cb.normalColor = newColor;
         Button.GetComponent<Button>().colors = cb;
+    }
+
+    void slidePanelsEntry(Animator cur_Panel_Animation)
+    {
+        Start_Animation.SetTrigger("Exit");
+        Start_Animation.ResetTrigger("Entry");
+        Communication_Screen.SetActive(true);
+        cur_Panel_Animation.SetTrigger("Entry");
+        cur_Panel_Animation.ResetTrigger("Exit");
+    }    
+    
+    void slidePanelsExit(Animator cur_Panel_Animation)
+    {
+        Start_Animation.SetTrigger("Entry");
+        Start_Animation.ResetTrigger("Exit");
+        cur_Panel_Animation.SetTrigger("Exit");
+        cur_Panel_Animation.ResetTrigger("Entry");
     }
 
     //makes the Button highlighted
