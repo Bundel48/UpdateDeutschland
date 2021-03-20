@@ -30,25 +30,23 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 #define SDA2 17
 #define SCL2 16
 
-#define SDA3 18
-#define SCL3 5
 
 TwoWire I2Cone = TwoWire(0);
 TwoWire I2Ctwo = TwoWire(1);
-TwoWire I2Cthre = TwoWire(2);
+
 
 // an MPU9250 object with the MPU-9250 sensor on I2C bus 0 with address 0x68
 MPU9250 IMU1(I2Cone,0x68);
 MPU9250 IMU2(I2Ctwo,0x68);
-MPU9250 IMU3(I2Ctwo,0x68);
 
-int status1, status2, status3;
+
+int status1, status2;
 
 void setup() {
 
   I2Cone.begin(SDA1,SCL1,400000); // SDA pin 21, SCL pin 22 TTGO TQ
   I2Ctwo.begin(SDA2,SCL2,400000); // SDA2 pin 17, SCL2 pin 16 
-  I2Cthre.begin(SDA3,SCL3,400000); // SDA2 pin 17, SCL2 pin 16 
+
   // serial to display data
   Serial.begin(9600);
   while(!Serial) {}
@@ -70,14 +68,7 @@ void setup() {
     Serial.println(status2);
     while(1) {}
   }
-  status3 = IMU3.begin();
-  if (status3 < 0) {
-    Serial.println("IMU2 initialization unsuccessful");
-    Serial.println("Check IMU wiring or try cycling power");
-    Serial.print("Status: ");
-    Serial.println(status3);
-    while(1) {}
-  }
+
   // setting the accelerometer full scale range to +/-8G 
   IMU1.setAccelRange(MPU9250::ACCEL_RANGE_2G);
   // setting the gyroscope full scale range to +/-500 deg/s
@@ -96,21 +87,13 @@ void setup() {
   // setting SRD to 19 for a 50 Hz update rate
   IMU2.setSrd(19);
 
-  // setting the accelerometer full scale range to +/-8G 
-  IMU3.setAccelRange(MPU9250::ACCEL_RANGE_2G);
-  // setting the gyroscope full scale range to +/-500 deg/s
-  IMU3.setGyroRange(MPU9250::GYRO_RANGE_250DPS);
-  // setting DLPF bandwidth to 20 Hz
-  IMU3.setDlpfBandwidth(MPU9250::DLPF_BANDWIDTH_20HZ);
-  // setting SRD to 19 for a 50 Hz update rate
-  IMU3.setSrd(19);
+
 }
 
 void loop() {
   // read the sensor
   IMU1.readSensor();
   IMU2.readSensor();
-  IMU3.readSensor();
   // display the data
 
 /*
@@ -128,7 +111,7 @@ void loop() {
   Serial.print(IMU1.getGyroZ_rads(),6);
   Serial.println("\t");
 */
-/*
+
   Serial.print("2=>");
   Serial.print(IMU2.getAccelX_mss(),6);
   Serial.print("\t");
@@ -142,20 +125,7 @@ void loop() {
   Serial.print("\t");
   Serial.print(IMU2.getGyroZ_rads(),6);
   Serial.println("\t");
-*/
-  Serial.print("3=>");
-  Serial.print(IMU3.getAccelX_mss(),6);
-  Serial.print("\t");
-  Serial.print(IMU3.getAccelY_mss(),6);
-  Serial.print("\t");
-  Serial.print(IMU3.getAccelZ_mss(),6);
-  Serial.print("\t");
-  Serial.print(IMU3.getGyroX_rads(),6);
-  Serial.print("\t");
-  Serial.print(IMU3.getGyroY_rads(),6);
-  Serial.print("\t");
-  Serial.print(IMU3.getGyroZ_rads(),6);
-  Serial.println("\t");
+
 
   delay(200);
 }
