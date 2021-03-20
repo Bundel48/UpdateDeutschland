@@ -7,8 +7,11 @@ using UnityEngine.UI;
 public class SideMenuV : MonoBehaviour
 {
 
-    public GameObject StartScreen;
-    public GameObject PflegeScreen;
+    public GameObject Start_Screen;
+    public GameObject Help_Screen;
+    public GameObject Communication_Screen;
+    public GameObject Entertainment_Screen;
+    public GameObject Training_Screen;
 
     Color lerpedColor = Color.white;
 
@@ -39,6 +42,25 @@ public class SideMenuV : MonoBehaviour
     public GameObject Pain_Button;
     public GameObject OtherMed_Button;
 
+    //Kommunikationspanel
+    public GameObject LeaveCommunication_Button;
+    public GameObject FirstContact_Button;
+    public GameObject SecondContact_Button;
+    public GameObject ThirdContact_Button;
+
+    //Unterhaltungspanel
+    public GameObject LeaveEntertainment_Button;
+    public GameObject FirstEntertainment_Button;
+    public GameObject SecondEntertainment_Button;
+    public GameObject ThirdEntertainment_Button;
+
+    //Übungspanel
+    public GameObject LeaveTraining_Button;
+    public GameObject FirstTraining_Button;
+    public GameObject SecondTraining_Button;
+    public GameObject ThirdTraining_Button;
+
+
 
 
     //Do Stuffs
@@ -57,8 +79,11 @@ public class SideMenuV : MonoBehaviour
     {
         {
             lerpedColor = Color.Lerp(startColor, endColor, colorTime);
-            StartScreen.GetComponent<Image>().color = lerpedColor;
-            PflegeScreen.GetComponent<Image>().color = lerpedColor;
+            Start_Screen.GetComponent<Image>().color = lerpedColor;
+            Communication_Screen.GetComponent<Image>().color = lerpedColor;
+            Entertainment_Screen.GetComponent<Image>().color = lerpedColor;
+            Training_Screen.GetComponent<Image>().color = lerpedColor;
+            Help_Screen.GetComponent<Image>().color = lerpedColor;
             if (colorTime < 1){ // while t below the end limit...
                 // increment it at the desired rate every update:
                 colorTime += Time.deltaTime/duration;
@@ -111,6 +136,45 @@ public class SideMenuV : MonoBehaviour
                         changeButton(Pain_Button);
                         break;
                 }
+            }else if(currentPanel == 3){
+                
+                switch(lastSelectedButton.name){
+                    case "FirstContact_Button":
+                        changeButton(LeaveCommunication_Button);
+                        break;
+                    case "SecondContact_Button":
+                        changeButton(FirstContact_Button);
+                        break;
+                    case "ThirdContact_Button":
+                        changeButton(SecondContact_Button);
+                        break;
+                }
+            }else if(currentPanel == 4){
+                
+                switch(lastSelectedButton.name){
+                    case "FirstEntertainment_Button":
+                        changeButton(LeaveEntertainment_Button);
+                        break;
+                    case "SecondEntertainment_Button":
+                        changeButton(FirstEntertainment_Button);
+                        break;
+                    case "ThirdEntertainment_Button":
+                        changeButton(SecondEntertainment_Button);
+                        break;
+                }
+            }else if(currentPanel == 5){
+                
+                switch(lastSelectedButton.name){
+                    case "FirstTraining_Button":
+                        changeButton(LeaveTraining_Button);
+                        break;
+                    case "SecondTraining_Button":
+                        changeButton(FirstTraining_Button);
+                        break;
+                    case "ThirdTraining_Button":
+                        changeButton(SecondTraining_Button);
+                        break;
+                }
             }
         }
         if (Input.GetKeyUp(KeyCode.Keypad5))
@@ -118,13 +182,49 @@ public class SideMenuV : MonoBehaviour
             Debug.Log("confirm.");
             switch(lastSelectedButton.name){
                 case "Help_Button":
-                    PflegeScreen.SetActive(true);
+                    Help_Screen.SetActive(true);
                     recolorAllBackgrounds(colorHelp);
                     changeButton(LeaveHelp_Button);
                     currentPanel = 2;
                     break;
                 case "LeaveHelp_Button":
-                    PflegeScreen.SetActive(false);
+                    Help_Screen.SetActive(false);
+                    recolorAllBackgrounds(colorStartScreen);
+                    changeButton(Communication_Button);
+                    currentPanel = 1;
+                    break;
+                case "Communication_Button":
+                    Communication_Screen.SetActive(true);
+                    recolorAllBackgrounds(colorCommunication);
+                    changeButton(LeaveCommunication_Button);
+                    currentPanel = 3;
+                    break;
+                case "LeaveCommunication_Button":
+                    Communication_Screen.SetActive(false);
+                    recolorAllBackgrounds(colorStartScreen);
+                    changeButton(Communication_Button);
+                    currentPanel = 1;
+                    break;
+                case "Entertainment_Button":
+                    Entertainment_Screen.SetActive(true);
+                    recolorAllBackgrounds(colorEntertainment);
+                    changeButton(LeaveEntertainment_Button);
+                    currentPanel = 4;
+                    break;
+                case "LeaveEntertainment_Button":
+                    Entertainment_Screen.SetActive(false);
+                    recolorAllBackgrounds(colorStartScreen);
+                    changeButton(Communication_Button);
+                    currentPanel = 1;
+                    break;
+                case "Training_Button":
+                    Training_Screen.SetActive(true);
+                    recolorAllBackgrounds(colorTraining);
+                    changeButton(LeaveTraining_Button);
+                    currentPanel = 5;
+                    break;
+                case "LeaveTraining_Button":
+                    Training_Screen.SetActive(false);
                     recolorAllBackgrounds(colorStartScreen);
                     changeButton(Communication_Button);
                     currentPanel = 1;
@@ -158,6 +258,42 @@ public class SideMenuV : MonoBehaviour
                         changeButton(OtherMed_Button);
                         break;
                 }
+            }else if(currentPanel == 3){
+                switch(lastSelectedButton.name){
+                    case "LeaveCommunication_Button":
+                        changeButton(FirstContact_Button);
+                        break;
+                    case "FirstContact_Button":
+                        changeButton(SecondContact_Button);
+                        break;
+                    case "SecondContact_Button":
+                        changeButton(ThirdContact_Button);
+                        break;
+                }
+            }else if(currentPanel == 4){
+                switch(lastSelectedButton.name){
+                    case "LeaveEntertainment_Button":
+                        changeButton(FirstEntertainment_Button);
+                        break;
+                    case "FirstEntertainment_Button":
+                        changeButton(SecondEntertainment_Button);
+                        break;
+                    case "SecondEntertainment_Button":
+                        changeButton(ThirdEntertainment_Button);
+                        break;
+                }
+            }else if(currentPanel == 5){
+                switch(lastSelectedButton.name){
+                    case "LeaveTraining_Button":
+                        changeButton(FirstTraining_Button);
+                        break;
+                    case "FirstTraining_Button":
+                        changeButton(SecondTraining_Button);
+                        break;
+                    case "SecondTraining_Button":
+                        changeButton(ThirdTraining_Button);
+                        break;
+                }
             }
         }
     }
@@ -172,7 +308,6 @@ public class SideMenuV : MonoBehaviour
 
     //makes the Button not highlighted
     void unhightlightButton(GameObject Button){
-        Debug.Log("Get Bright");
         ColorBlock cb = Button.GetComponent<Button>().colors;
         Color newColor = cb.normalColor;
         newColor.a = 1f;
@@ -182,7 +317,6 @@ public class SideMenuV : MonoBehaviour
 
     //makes the Button highlighted
     void highlightButton(GameObject Button){
-        Debug.Log("Tango Charlie going dark");
         ColorBlock cb = Button.GetComponent<Button>().colors;
         Color newColor = cb.normalColor;
         newColor.a = 0.5f;
