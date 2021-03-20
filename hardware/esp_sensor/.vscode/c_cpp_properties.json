@@ -10,7 +10,6 @@
             "includePath": [
                 "c:/Users/info/Documents/PlatformIO/Projects/updatedeutschlandgit/UpdateDeutschland/hardware/esp_sensor/include",
                 "c:/Users/info/Documents/PlatformIO/Projects/updatedeutschlandgit/UpdateDeutschland/hardware/esp_sensor/src",
-                "c:/Users/info/Documents/PlatformIO/Projects/updatedeutschlandgit/UpdateDeutschland/hardware/esp_sensor/.pio/libdeps/lolin32/BitBang_I2C/src",
                 "c:/Users/info/Documents/PlatformIO/Projects/updatedeutschlandgit/UpdateDeutschland/hardware/esp_sensor/.pio/libdeps/lolin32/Bolder Flight Systems MPU9250/src",
                 "C:/Users/info/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                 "C:/Users/info/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src",
@@ -77,6 +76,7 @@
                 "C:/Users/info/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/fb_gfx",
                 "C:/Users/info/.platformio/packages/framework-arduinoespressif32/cores/esp32",
                 "C:/Users/info/.platformio/packages/framework-arduinoespressif32/variants/lolin32",
+                "c:/Users/info/Documents/PlatformIO/Projects/updatedeutschlandgit/UpdateDeutschland/hardware/esp_sensor/.pio/libdeps/lolin32/BitBang_I2C/src",
                 "C:/Users/info/.platformio/lib/Adafruit NeoPixel",
                 "C:/Users/info/.platformio/lib/Adafruit Thermal Printer Library",
                 "C:/Users/info/.platformio/lib/DS1307RTC",
@@ -124,7 +124,6 @@
                 "path": [
                     "c:/Users/info/Documents/PlatformIO/Projects/updatedeutschlandgit/UpdateDeutschland/hardware/esp_sensor/include",
                     "c:/Users/info/Documents/PlatformIO/Projects/updatedeutschlandgit/UpdateDeutschland/hardware/esp_sensor/src",
-                    "c:/Users/info/Documents/PlatformIO/Projects/updatedeutschlandgit/UpdateDeutschland/hardware/esp_sensor/.pio/libdeps/lolin32/BitBang_I2C/src",
                     "c:/Users/info/Documents/PlatformIO/Projects/updatedeutschlandgit/UpdateDeutschland/hardware/esp_sensor/.pio/libdeps/lolin32/Bolder Flight Systems MPU9250/src",
                     "C:/Users/info/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                     "C:/Users/info/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src",
@@ -191,6 +190,7 @@
                     "C:/Users/info/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/fb_gfx",
                     "C:/Users/info/.platformio/packages/framework-arduinoespressif32/cores/esp32",
                     "C:/Users/info/.platformio/packages/framework-arduinoespressif32/variants/lolin32",
+                    "c:/Users/info/Documents/PlatformIO/Projects/updatedeutschlandgit/UpdateDeutschland/hardware/esp_sensor/.pio/libdeps/lolin32/BitBang_I2C/src",
                     "C:/Users/info/.platformio/lib/Adafruit NeoPixel",
                     "C:/Users/info/.platformio/lib/Adafruit Thermal Printer Library",
                     "C:/Users/info/.platformio/lib/DS1307RTC",
