@@ -15,10 +15,10 @@ public class SideMenuV : MonoBehaviour
 
     Color lerpedColor = Color.white;
 
-    Color colorCommunication = new Color(0.0177f, 0.5377f, 0.0697f);
-    Color colorEntertainment = new Color(0.7924f, 0.7423f, 0.0261f);
-    Color colorTraining = new Color(0.3434f, 0.7047f, 0.7830f);
-    Color colorHelp = new Color(0.6117f, 0.21157f, 0.1411f);  
+    Color colorCommunication = new Color(0.6941177f, 0.2941177f, 0.7921569f);
+    Color colorEntertainment = new Color(0.9058824f, 0.8431373f, 0.0f);
+    Color colorTraining = new Color(0.0f, 0.6235294f, 1.0f);
+    Color colorHelp = new Color(1.0f, 0.3215686f, 0.3215686f);  
     Color colorStartScreen = new Color(0.2264151f, 0.2264151f, 0.2264151f);
 
     Color startColor;
@@ -112,7 +112,7 @@ public class SideMenuV : MonoBehaviour
         //Debug.Log(Communication_Button.GetComponent<Button>().colors.normalColor);
 
         //reaction on inputs my guy
-        if (Input.GetKeyUp(KeyCode.Keypad8))
+        if (Input.GetKeyUp(KeyCode.W))
         {
             Debug.Log("Up.");
             if(currentPanel == 1){
@@ -181,7 +181,7 @@ public class SideMenuV : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyUp(KeyCode.Keypad5))
+        if (Input.GetKeyUp(KeyCode.X))
         {
             Debug.Log("confirm.");
             
@@ -209,7 +209,7 @@ public class SideMenuV : MonoBehaviour
                     recolorAllBackgrounds(colorStartScreen);
                     slidePanelsExit(Communication_Animation);
                     changeButton(Communication_Button);
-                    Communication_Screen.SetActive(false);
+                    //Communication_Screen.SetActive(false);
                     currentPanel = 1;
                     break;
                 case "Entertainment_Button":
@@ -238,7 +238,7 @@ public class SideMenuV : MonoBehaviour
                     break;
             }
         }
-        if (Input.GetKeyUp(KeyCode.Keypad2))
+        if (Input.GetKeyUp(KeyCode.S))
         {
             Debug.Log("down.");
             if(currentPanel == 1){
@@ -328,15 +328,16 @@ public class SideMenuV : MonoBehaviour
         Start_Animation.ResetTrigger("Entry");
         Communication_Screen.SetActive(true);
         cur_Panel_Animation.SetTrigger("Entry");
-        cur_Panel_Animation.ResetTrigger("Exit");
     }    
     
     void slidePanelsExit(Animator cur_Panel_Animation)
     {
         Start_Animation.SetTrigger("Entry");
         Start_Animation.ResetTrigger("Exit");
+        Communication_Screen.SetActive(true);
         cur_Panel_Animation.SetTrigger("Exit");
         cur_Panel_Animation.ResetTrigger("Entry");
+        
     }
 
     //makes the Button highlighted
