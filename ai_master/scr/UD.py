@@ -139,22 +139,22 @@ def generate_Label_without_time_offset(Data_Meta_start_end_durataion,timestampIM
     for i in range(np.shape(Data_Meta_start_end_durataion)[0]):
         label_vector_list = []
         label_shift_idx_previous = 0
-        start_time = Data_Meta_start_end_durataion[i][1,0]      # lese hier einfach den Startpunkt aus, wenn in der GUI auch 'Start' getippt wurde
+        start_time = Data_Meta_start_end_durataion[i][1,0]  # lese hier einfach den Startpunkt aus, wenn in der GUI auch 'Start' getippt wurde
+        end_time = Data_Meta_start_end_durataion[i][-2,1]
         start_idx = np.min(np.where(timestampIMU[i] >= start_time)[0])
+        end_idx = np.max(np.where(timestampIMU[i] <= end_time)[0])
         timestampIMU_i = timestampIMU[i][start_idx:]
-        Gyro_i = np.asarray(Gyro[i])[:,start_idx:,:]
-
-
+        Gyro_i = np.asarray(Gyro[i])[:,start_idx:end_idx,:]
 
         label_timestamps = Data_Meta_label_timestamps[i]
-        for j in range(0,np.shape(label_timestamps)[0]-1):
+        for j in range(0,np.shape(label_timestamps)[0]):
             sum_time = np.cumsum(Data_Meta_label_timestamps[i][:(j+1)])[-1]
 
             label_shift_idx = np.min(np.where(timestampIMU[i] >= sum_time)[0])
             label_id = Data_Meta_label_taskID[i][j]
             label_vector = np.zeros((label_shift_idx-label_shift_idx_previous,), dtype=np.int32)+label_id
             label_shift_idx_previous = label_shift_idx
-            label_vector_list.append(label_vector)
+            label_vector_list.extend(label_vector)
 
         Gyro_time_cropped_list.append(Gyro_i)
         timestampIMU_time_cropped_list.append(timestampIMU_i)
