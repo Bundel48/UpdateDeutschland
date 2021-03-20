@@ -1,5 +1,6 @@
 # import tensorflow as tf
 import numpy as np
+import sys
 import os
 import resampy
 import random
@@ -162,13 +163,85 @@ def generate_Label_without_time_offset(Data_Meta_start_end_durataion,timestampIM
 
     return Gyro_time_cropped_list, timestampIMU_time_cropped_list, label_vector_time_cropped_list
 
+
 samplig_rate = 10.0
 Gyro,timestampIMU,label = generate_Label_without_time_offset(Data_Meta_start_end_durataion,timestampIMU,Data_Meta_label_timestamps,Data_Meta_label_taskID,Gyro,samplig_rate)
+
+
+# ------------------------------------------
+# ------- Template Bild erstellen  ---------
+# ------------------------------------------
+'''
+Bewegung : 41 Ruhebewegung
+            1 Links
+            2 Rechts
+            3 Oben
+            4 Unten 
+'''
+def find_first_Gesture(data, label, Bewegung):
+    if Bewegung == 'Links':
+        Bewegung = 1
+    elif Bewegung == 'Rechts':
+        Bewegung = 2
+    elif Bewegung == 'Oben':
+        Bewegung = 3
+    elif Bewegung == 'Unten':
+        Bewegung = 4
+    else:
+        print('Lies die blöden Möglichkeiten')
+        sys.exit()
+    label_0_1 = np.where(np.asarray(label[0]) == Bewegung)[0]
+    tmp = np.concatenate([np.zeros(1),label_0_1],axis=0)
+    label_0_1 =np.concatenate([label_0_1,np.zeros(1)],axis=0)
+    label_diff = label_0_1-tmp
+    label_diff = label_diff[1:-2]
+    label_max_diff = np.argmax(label_diff)
+    label_indices = np.asarray(np.arange(label_0_1[0],label_0_1[0]+label_max_diff), dtype=np.int32)
+
+    data = data[:,label_indices,:]
+    return data
+
+Bew = 'Oben'
+data_template = Gyro[3]
+template_img = find_first_Gesture(data_template, label, Bew)
+print('Stop')
 
 # ------------------------------------------
 # ------------ Initialisierung  ------------
 # ------------------------------------------
 
+# def Data_to_Decision(data):
+#     Gyro_01 = data[0]
+#     Gyro_02 = data[1]
+#     threshold = 10
+#
+#     if (np.abs(Gyro_01[0]) >= threshold) or (np.abs(Gyro_01[1]) >= threshold) or (np.abs(Gyro_01[2]) >= threshold):
+#         Gyro_x = Gyro_01[0]
+#         Gyro_y = Gyro_01[1]
+#         Gyro_z = Gyro_01[2]
+#         if Gyro_x
+#     else:
+#         Decision = 0
+#
+#
+# def Decision_Pipeline(Decisions):
+#
+#     if Decision_right == True:
+#         Decision = 1
+#
+#     elif Decision_left == True:
+#         Decision = 2
+#
+#     elif Decision_up == True:
+#         Decision = 3
+#
+#     elif Decision_down == True:
+#         Decision = 4
+#
+#     else:
+#         Decision = 0
+#
+#     return Decision
 
 print(Gyro)
 
