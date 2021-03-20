@@ -33,11 +33,12 @@ namespace middleware
             string[] pluginFilesArray = 
                 Directory.GetFiles("plugins/", "*.dll");
             ArrayList pluginFiles = new ArrayList(pluginFilesArray);
-            
+            pluginFiles.Add("../Plugins/BasicInputPlugin/build/net5.0/BasicInputPlugin.dll");
+            pluginFiles.Add("../Plugins/MenuOutputPlugin/build/net5.0/MenuOutputPlugin.dll");
             // Use this line to add a plugin that is not within the plugin subfolder
             // dlls within the plugin folder are loaded automatically
-            pluginFiles.Add(@"D:\Dokumente\Programmieren\UpdateDeutschland\middleware\PluginSrc\BasicInputPlugin\build\net5.0\BasicInputPlugin.dll");
-            pluginFiles.Add(@"D:\Dokumente\Programmieren\UpdateDeutschland\middleware\PluginSrc\BasicOutputPlugin\build\net5.0\BasicOutputPlugin.dll");
+            //pluginFiles.Add(@"D:\Dokumente\Programmieren\UpdateDeutschland\middleware\PluginSrc\BasicInputPlugin\build\net5.0\BasicInputPlugin.dll");
+            //pluginFiles.Add(@"D:\Dokumente\Programmieren\UpdateDeutschland\middleware\PluginSrc\BasicOutputPlugin\build\net5.0\BasicOutputPlugin.dll");
             
             foreach (string pluginFile in pluginFiles) {
                 var DLL = Assembly.LoadFile(Path.GetFullPath(pluginFile));

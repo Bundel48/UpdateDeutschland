@@ -1,16 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <OutputPath>build</OutputPath>
   </PropertyGroup>
 
-
   <ItemGroup>
     <PackageReference Include="WatsonWebsocket" Version="2.2.1.3" />
     <Reference Include="PluginInterface">
-      <HintPath>../PluginInterface/build/net5.0/pluginInterface.dll</HintPath>
+      <HintPath>../../PluginInterface/build/net5.0/pluginInterface.dll</HintPath>
     </Reference>
     <PackageReference Include="NLog" Version="4.7.8" />
     <PackageReference Include="SlimMessageBus" Version="1.3.0" />
