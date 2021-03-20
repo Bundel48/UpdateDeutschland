@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2021-03-20T01:31:49.425+01:00
-  initializedAtString: 2021-03-20T01:31:49.287+01:00
+  lastUpdatedAtString: 2021-03-20T14:39:34.753+01:00
+  initializedAtString: 2021-03-20T13:34:23.387+01:00
   localBranches:
+  - name: Bundel48_GUI
+    tracking: 
   - name: GUI
     tracking: origin/GUI
   - name: main
@@ -27,7 +29,7 @@ MonoBehaviour:
     tracking: '[None]'
   remotes:
   - name: origin
-    url: https://github.com/Bundel48/UpdateDeutschland.git
+    url: git@github.com:Bundel48/UpdateDeutschland.git
     login: 
     user: 
     host: 
@@ -35,18 +37,24 @@ MonoBehaviour:
     token: 
   localConfigBranches:
     keys:
+    - Bundel48_GUI
     - GUI
     - main
     values:
+    - name: Bundel48_GUI
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
     - name: GUI
       remote:
         name: origin
-        url: https://github.com/Bundel48/UpdateDeutschland.git
+        url: git@github.com:Bundel48/UpdateDeutschland.git
       trackingBranch: GUI
     - name: main
       remote:
         name: origin
-        url: https://github.com/Bundel48/UpdateDeutschland.git
+        url: git@github.com:Bundel48/UpdateDeutschland.git
       trackingBranch: main
   remoteConfigBranches:
     keys:
@@ -60,16 +68,16 @@ MonoBehaviour:
       - name: GUI
         remote:
           name: origin
-          url: https://github.com/Bundel48/UpdateDeutschland.git
+          url: git@github.com:Bundel48/UpdateDeutschland.git
         trackingBranch: 
       - name: HEAD
         remote:
           name: origin
-          url: https://github.com/Bundel48/UpdateDeutschland.git
+          url: git@github.com:Bundel48/UpdateDeutschland.git
         trackingBranch: 
   configRemotes:
     keys:
     - origin
     values:
     - name: origin
-      url: https://github.com/Bundel48/UpdateDeutschland.git
+      url: git@github.com:Bundel48/UpdateDeutschland.git
