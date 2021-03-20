@@ -1,3 +1,8 @@
+using SlimMessageBus;
+using System.Collections.Generic;
+using SlimMessageBus.Host.Config;
+using System.Threading.Tasks;
+
 namespace PluginInterface {
     public interface IPlugin
     {

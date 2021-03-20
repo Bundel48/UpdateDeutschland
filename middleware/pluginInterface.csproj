@@ -1,19 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <OutputPath>MiddlewareSrc\build</OutputPath>
+    <OutputPath>PluginInterface\build</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
-    <DefaultItemExcludes>$(DefaultItemExcludes);PluginSrc\**\*.cs;PluginInterface\**\*.cs;</DefaultItemExcludes>
+    <DefaultItemExcludes>$(DefaultItemExcludes);MiddlewareSrc\**\*.cs;PluginSrc\**\*.cs;</DefaultItemExcludes>
   </PropertyGroup>
 
 
   <ItemGroup>
-    <Reference Include="PluginInterface">
-      <HintPath>PluginInterface/build/net5.0/pluginInterface.dll</HintPath>
-    </Reference>
     <PackageReference Include="NLog" Version="4.7.8" />
     <PackageReference Include="SlimMessageBus" Version="1.3.0" />
     <PackageReference Include="SlimMessageBus.Host.Memory" Version="1.11.0" />

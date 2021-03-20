@@ -2,7 +2,9 @@
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using Microsoft.Extensions.Logging;
 using NLog;
 using SlimMessageBus;
@@ -10,6 +12,7 @@ using SlimMessageBus.Host.Serialization.Json;
 using SlimMessageBus.Host.Config;
 using SlimMessageBus.Host.Memory;
 using SlimMessageBus.Host.DependencyResolver;
+using PluginInterface;
 
 
 namespace middleware
@@ -22,57 +25,81 @@ namespace middleware
         //TestPlugin.setMessageBus(bus)
         //TestPlugin.loop
         private static IMessageBus bus;
-        private static string[] pluginMethods = {
-            "initBus",
-            "getHandlerResolvers",
-            "setMessageBus",
-            "loop"
-        };
+
+        private static Dictionary<System.Type, object> handlerResolver = new Dictionary<System.Type, object>();
+        private static LinkedList<IPlugin> plugins = new LinkedList<IPlugin>();
         public static void Main(string[] args)
         {
-            var DLL = Assembly.LoadFile(@"D:\Dokumente\Programmieren\UpdateDeutschland\plugins\TestPlugin\bin\Debug\net5.0\Plugin.dll");
-            Console.WriteLine("dll exported types: "+DLL.GetExportedTypes().Length);
-            foreach (Type type in DLL.GetExportedTypes())
-            {
-                var c = Activator.CreateInstance(type);
-                bool validPlugin = true;
-                foreach (string method in pluginMethods) {
-                    if (c.GetType().GetMethod(method) == null) {
-                        validPlugin = false;
+            string[] pluginFilesArray = 
+                Directory.GetFiles("plugins/", "*.dll");
+            ArrayList pluginFiles = new ArrayList(pluginFilesArray);
+            
+            pluginFiles.Add(@"D:\Dokumente\Programmieren\UpdateDeutschland\middleware\PluginSrc\TestPlugin\build\net5.0\testPlugin.dll");
+            
+            foreach (string pluginFile in pluginFiles) {
+                var DLL = Assembly.LoadFile(pluginFile);
+                Console.WriteLine("dll exported types: "+DLL.GetExportedTypes().Length);
+                foreach (Type type in DLL.GetExportedTypes())
+                {
+                    try {
+                        var c = Activator.CreateInstance(type);
+                        IPlugin plugin = (IPlugin) c;
+                        plugins.AddFirst(plugin);
+                        Console.WriteLine("found plugin: "+type);
+                    } catch (Exception e) {
+                        if (! (e.GetType() == typeof(MissingMethodException))) {
+                            Console.WriteLine(e.ToString());
+                            Console.WriteLine("invalid plugin found: "+type);
+                        }
                     }
                 }
-
-                if (validPlugin) {
-                    Console.WriteLine("found plugin: "+type);
-                } else {
-                    Console.WriteLine("invalid plugin found: "+type);
-                }
-            }
+            } 
+            
+            
             
             MessageBusBuilder builder = MessageBusBuilder.Create()
                 .WithSerializer(new JsonMessageSerializer())
                 .WithDependencyResolver(new LookupDependencyResolver(type =>
                 {
-                    //Dictionary<System.Type, object> dict = TestPlugin.getHandlerResolvers();
-                    //if (dict.ContainsKey(type)) {
-                    //    return dict[type];
-                    //}
-                    // Simulate a dependency container
-                    if (type == typeof(ILoggerFactory)) {
+                    if (handlerResolver.ContainsKey(type)) {
+                        return handlerResolver[type];
+                    } else if (type == typeof(ILoggerFactory)) {
                         return null;
                     } else {
                         Console.WriteLine("other type!! "+type);
                     }
                     throw new InvalidOperationException();
                 }));
-            
-            
+            foreach (IPlugin plugin in plugins) {
+                builder = plugin.initBus(builder);
+
+                Dictionary<System.Type, object> pluginHandlers = plugin.getHandlerResolvers();
+                foreach (KeyValuePair<System.Type, object> entry in pluginHandlers) {
+                    if (handlerResolver.ContainsKey(entry.Key)) {
+                        Console.WriteLine("ERROR, Handler Resolver already contained!");
+                        throw new Exception("ERROR, Handler Resolver already contained!");
+                    }
+
+                    handlerResolver[entry.Key] = entry.Value;
+                }
+            }
+
+
 
             bus = builder
                 .Do(builder => {
                     builder.WithProviderMemory(new MemoryMessageBusSettings{EnableMessageSerialization = true});
                 })
                 .Build();
+            foreach (IPlugin plugin in plugins) {
+                plugin.setMessageBus(bus);
+            }
+            
+            foreach (IPlugin plugin in plugins) {
+                var pluginTask = Task.Factory.StartNew(plugin.loop, CancellationToken.None, TaskCreationOptions.LongRunning, TaskScheduler.Default);
+            }
+            
+            
             //TestPlugin.setMessageBus(bus);
             //var produceTask = Task.Factory.StartNew(TestPlugin.loop, CancellationToken.None, TaskCreationOptions.LongRunning, TaskScheduler.Default);
             //produceTask.Start();
