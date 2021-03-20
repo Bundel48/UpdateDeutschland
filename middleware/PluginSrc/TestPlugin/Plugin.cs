@@ -4,31 +4,32 @@ using NLog;
 using SlimMessageBus;
 using SlimMessageBus.Host.Config;
 using System.Collections.Generic;
+using PluginInterface;
 
 namespace middleware {
-    class TestPlugin {
-        private static Logger log = LogManager.GetCurrentClassLogger();
-        private static IMessageBus bus;
+    public class TestPlugin : IPlugin {
+        private Logger log = LogManager.GetCurrentClassLogger();
+        private IMessageBus bus;
 
-        public static MessageBusBuilder initBus(MessageBusBuilder bus) {
+        public MessageBusBuilder initBus(MessageBusBuilder bus) {
             return bus
                 .Produce<MessageRequest>(x => x.DefaultTopic("Send"))
                 .Handle<MessageRequest, MessageResponse>(x => x.Topic("Send").WithHandler<Handler>())
                 .ExpectRequestResponses(x => x.ReplyToTopic("Respond"));
         }
 
-        public static Dictionary<System.Type, object> getHandlerResolvers() {
+        public Dictionary<System.Type, object> getHandlerResolvers() {
             Dictionary<System.Type, object> dict = new Dictionary<System.Type, object>();
             dict.Add(typeof(Handler), new Handler());
 
             return dict;
         }
 
-        public static void setMessageBus(IMessageBus newBus) {
+        public void setMessageBus(IMessageBus newBus) {
             bus = newBus;
         }
 
-        public static async Task loop() {
+        public async Task loop() {
             while (true) {
                 Console.WriteLine("Senden");
                 var response = await bus.Send(new MessageRequest("Hallo Welt!"));
