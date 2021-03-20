@@ -3,17 +3,11 @@
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <OutputPath>PluginSrc\TestPlugin\build</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup>
-    <DefaultItemExcludes>$(DefaultItemExcludes);MiddlewareSrc\**\*.*;PluginInterface\**\*.*;</DefaultItemExcludes>
+    <OutputPath>build</OutputPath>
   </PropertyGroup>
 
 
-  <ItemGroup>
-    <Reference Include="PluginInterface">
-      <ReferencePath>D:/Dokumente/Programmieren/UpdateDeutschland/middleware/PluginInterface/build/net5.0/</ReferencePath>
-    </Reference>
+  <ItemGroup> 
     <PackageReference Include="NLog" Version="4.7.8" />
     <PackageReference Include="SlimMessageBus" Version="1.3.0" />
     <PackageReference Include="SlimMessageBus.Host.Memory" Version="1.11.0" />
