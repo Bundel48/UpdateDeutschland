@@ -36,7 +36,8 @@ namespace middleware
             
             // Use this line to add a plugin that is not within the plugin subfolder
             // dlls within the plugin folder are loaded automatically
-            //pluginFiles.Add(@"D:\Dokumente\Programmieren\UpdateDeutschland\middleware\PluginSrc\TestPlugin\build\net5.0\testPlugin.dll");
+            pluginFiles.Add(@"D:\Dokumente\Programmieren\UpdateDeutschland\middleware\PluginSrc\BasicInputPlugin\build\net5.0\BasicInputPlugin.dll");
+            pluginFiles.Add(@"D:\Dokumente\Programmieren\UpdateDeutschland\middleware\PluginSrc\BasicOutputPlugin\build\net5.0\BasicOutputPlugin.dll");
             
             foreach (string pluginFile in pluginFiles) {
                 var DLL = Assembly.LoadFile(Path.GetFullPath(pluginFile));

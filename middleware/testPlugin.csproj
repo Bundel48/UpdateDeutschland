@@ -6,13 +6,13 @@
     <OutputPath>PluginSrc\TestPlugin\build</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
-    <DefaultItemExcludes>$(DefaultItemExcludes);MiddlewareSrc\**\*.cs;PluginInterface\**\*.cs;</DefaultItemExcludes>
+    <DefaultItemExcludes>$(DefaultItemExcludes);MiddlewareSrc\**\*.*;PluginInterface\**\*.*;</DefaultItemExcludes>
   </PropertyGroup>
 
 
   <ItemGroup>
     <Reference Include="PluginInterface">
-      <HintPath>PluginInterface/build/net5.0/pluginInterface.dll</HintPath>
+      <ReferencePath>D:/Dokumente/Programmieren/UpdateDeutschland/middleware/PluginInterface/build/net5.0/</ReferencePath>
     </Reference>
     <PackageReference Include="NLog" Version="4.7.8" />
     <PackageReference Include="SlimMessageBus" Version="1.3.0" />
