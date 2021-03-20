@@ -34,10 +34,12 @@ namespace middleware
                 Directory.GetFiles("plugins/", "*.dll");
             ArrayList pluginFiles = new ArrayList(pluginFilesArray);
             
-            pluginFiles.Add(@"D:\Dokumente\Programmieren\UpdateDeutschland\middleware\PluginSrc\TestPlugin\build\net5.0\testPlugin.dll");
+            // Use this line to add a plugin that is not within the plugin subfolder
+            // dlls within the plugin folder are loaded automatically
+            //pluginFiles.Add(@"D:\Dokumente\Programmieren\UpdateDeutschland\middleware\PluginSrc\TestPlugin\build\net5.0\testPlugin.dll");
             
             foreach (string pluginFile in pluginFiles) {
-                var DLL = Assembly.LoadFile(pluginFile);
+                var DLL = Assembly.LoadFile(Path.GetFullPath(pluginFile));
                 Console.WriteLine("dll exported types: "+DLL.GetExportedTypes().Length);
                 foreach (Type type in DLL.GetExportedTypes())
                 {
@@ -50,6 +52,8 @@ namespace middleware
                         if (! (e.GetType() == typeof(MissingMethodException))) {
                             Console.WriteLine(e.ToString());
                             Console.WriteLine("invalid plugin found: "+type);
+                        } else {
+                            Console.WriteLine("ignored invalid interface class");
                         }
                     }
                 }
