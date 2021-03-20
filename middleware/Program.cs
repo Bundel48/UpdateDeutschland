@@ -5,10 +5,17 @@ namespace middleware
 {
     class Program
     {
+        
         private static Logger log = LogManager.GetCurrentClassLogger();
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+        }
+        
+        private void busTest(){
+            IMessageBus bus;
+            await bus.Publish();
+
         }
     }
 }
