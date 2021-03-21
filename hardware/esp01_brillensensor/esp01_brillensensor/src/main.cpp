@@ -6,9 +6,13 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266mDNS.h>
 #include <PubSubClient.h>
-#include <Buzzer.h>
 #include <ArduinoOTA.h>
 #include <WiFiUdp.h>
+//include <Tone.h>
+
+#define buzzPin 3
+#define sdaPin 0
+#define sclPin 2
 
 const char* ssid = "GATEWAY49";
 const char* pass = "Ready2start";
@@ -24,13 +28,12 @@ const char* ota_Password = "47110815";
 
 //!!!!!!!!!!!!!DIE HIER SIND ZUM TUNEN DER ERKENNUNG!!!!!!!!!!!!!!!!!!!!
 
-const int count=4;   //WIE LANGE DIE BEWEGUNG ANHALTEN MUSS
-const int triggerCount=30;    //WIE LANGE KEINE NEUEN EVENTS ERKANNT WERDEN
-const int threshhold=9;     //WIE STARK DIE BEWEGUNG SEIN MUSS
+const int count = 2;   //WIE LANGE DIE BEWEGUNG ANHALTEN MUSS
+const int triggerCount = 150;    //WIE LANGE KEINE NEUEN EVENTS ERKANNT WERDEN
+const int threshhold = 1;     //WIE STARK DIE BEWEGUNG SEIN MUSS
 
 WiFiClient net;
 PubSubClient client(net);
-Buzzer buzzer(3);
 
 MPU9250 IMU(Wire,0x68);
 
@@ -50,9 +53,40 @@ int counterdown = 0;
 int counterleft = 0;
 int counterright = 0;
 float mittel[3] = {0,0,0};
-
+bool flagInitPhase = true;
 
 void startton() {
+  tone(buzzPin,440,500);
+}
+void finishton() {
+//  tone(buzzPin,500,500);
+//  tone(buzzPin,0,500);
+  tone(buzzPin,500,500);
+  tone(buzzPin,0,500);
+  tone(buzzPin,500,500);
+  tone(buzzPin,0,500);
+  tone(buzzPin,1000,1000);
+}
+void checkton(int type) { //1 => UP | 2 => DOWN | 3 => LEFT | 4 => RIGHT
+  switch (type) {
+    case 1:
+      tone(buzzPin,2500,30);
+    break;
+    case 2:
+      tone(buzzPin,500,30);
+    break;
+    case 3:
+      tone(buzzPin,1200,30);
+    break;
+    case 4:
+      tone(buzzPin,1700,30);
+    break;
+  }
+}
+void errorton() {
+  tone(buzzPin,500,200);
+  tone(buzzPin,0,200);
+  tone(buzzPin,300,600);
 
 }
 
@@ -99,6 +133,9 @@ void setup() {
   //Serial.begin(9600);
   //while(!Serial) {}
 
+  pinMode(buzzPin, OUTPUT);
+  startton();
+
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, pass);
 
@@ -130,6 +167,7 @@ void setup() {
   });
 
   ArduinoOTA.onError([](ota_error_t error) {
+    errorton();
     /*
     Serial.printf("Error[%u]: ", error);
     if (error == OTA_AUTH_ERROR) Serial.println("Auth Failed");
@@ -146,7 +184,7 @@ void setup() {
   //Serial.println(WiFi.localIP());
 
 
-  Wire.begin(0,2);
+  Wire.begin(sdaPin,sclPin);
 
   // start communication with IMU 
   status = IMU.begin();
@@ -155,6 +193,7 @@ void setup() {
     //Serial.println("Check IMU wiring or try cycling power");
     //Serial.print("Status: ");
     //Serial.println(status);
+    errorton();
     ESP.restart();
   }
   // setting the accelerometer full scale range to +/-4G 
@@ -165,6 +204,7 @@ void setup() {
   IMU.setDlpfBandwidth(MPU9250::DLPF_BANDWIDTH_5HZ);
   // setting SRD to 19 for a 50 Hz update rate
   IMU.setSrd(19);
+  finishton();
 }
 
 void loop() {
@@ -173,6 +213,7 @@ void loop() {
 
   if (!client.connected()) {
     //Serial.println("Error, connection MQTT lost!");
+    errorton();
     connect();
   }
   IMU.readSensor();
@@ -194,10 +235,15 @@ void loop() {
     mittel[1] = 0;
     mittel[2] = 0;
 
+    flagInitPhase = false;
+
     for (int coord = 0; coord < 3; coord++) {
       for (int entry = 99; entry != 0; entry--) {
         if (buffer[coord][entry] != NULL) {
           mittel[coord] += buffer[coord][entry];
+        }
+        else {
+          flagInitPhase = true;
         }
       }
     }
@@ -217,11 +263,12 @@ void loop() {
       if (abs(delta[2]) > abs(delta[1])) {
         if (delta[2] > 0) {
           counterup += 1;
-          counterdown += -1;
+          //counterdown += -1;
           counterleft += -1;
           counterright += -1;
           if (counterup > count) {
-            client.publish("kopf/Move", "UP");
+            client.publish("kopf/Move", "LEFT");
+            checkton(1); //1 => UP
             //Serial.println("Bewegung oben erkannt!");
             counterup = 0;
             counterdown = 0;
@@ -231,12 +278,13 @@ void loop() {
           }
         }
         else {
-          counterup += -1;
+          //counterup += -1;
           counterdown += +1;
           counterleft += -1;
           counterright += -1;
           if (counterdown > count) {
-            client.publish("kopf/Move", "DOWN");
+            client.publish("kopf/Move", "RIGHT");
+            checkton(2); //2 => DOWN
             //Serial.println("Bewegung unten erkannt!");
             counterup = 0;
             counterdown = 0;
@@ -250,10 +298,11 @@ void loop() {
         if (delta[1] > 0) {
           counterup += -1;
           counterdown += -1;
-          counterleft += -1;
+          //counterleft += -1;
           counterright += 1;
           if (counterright > count) {
-            client.publish("kopf/Move", "LEFT");
+            client.publish("kopf/Move", "UP");
+            checkton(3); //3 => LEFT
             //Serial.println("Bewegung links erkannt!");
             counterup = 0;
             counterdown = 0;
@@ -266,9 +315,10 @@ void loop() {
           counterup += -1;
           counterdown += -1;
           counterleft += 1;
-          counterright += -1;
+          //counterright += -1;
           if (counterleft > count) {
-            client.publish("kopf/Move", "RIGHT");
+            client.publish("kopf/Move", "DOWN");
+            checkton(4); //4 => RIGHT
             //Serial.println("Bewegung rechts erkannt!");
             counterup = 0;
             counterdown = 0;
@@ -297,18 +347,18 @@ void loop() {
   /*
     char buffer[6];
     dtostrf(IMU.getAccelX_mss(), 6, 5, buffer);
-    client.publish("/"+mqtt_Pref+"/AccelX", buffer);
+    client.publish("kopf/AccelX", buffer);
     dtostrf(IMU.getAccelY_mss(), 6, 5, buffer);
-    client.publish("/"+mqtt_Pref+"/AccelY", buffer);
+    client.publish("kopf/AccelY", buffer);
     dtostrf(IMU.getAccelZ_mss(), 6, 5, buffer);
-    client.publish("/"+mqtt_Pref+"/AccelZ", buffer);
+    client.publish("kopf/AccelZ", buffer);
     dtostrf(IMU.getGyroX_rads(), 6, 5, buffer);
-    client.publish("/"+mqtt_Pref+"/GyroX", buffer);
+    client.publish("kopf/GyroX", buffer);
     dtostrf(IMU.getGyroY_rads(), 6, 5, buffer);
-    client.publish("/"+mqtt_Pref+"/GyroY", buffer);
+    client.publish("kopf/GyroY", buffer);
     dtostrf(IMU.getGyroZ_rads(), 6, 5, buffer);
-    client.publish("/"+mqtt_Pref+"/GyroZ", buffer);
-  */
+    client.publish("kopf/GyroZ", buffer);
+    */
 }
 
  

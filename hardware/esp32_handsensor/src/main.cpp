@@ -13,6 +13,7 @@ const char* ssid = "GATEWAY49";
 const char* pass = "Ready2start";
 
 const char mqtt_Host[] = "135.125.216.231";
+
 const int mqtt_Port = 1883;
 const char* mqtt_User = "recomo";
 const char* mqtt_Password = "Recomo123%";
@@ -25,9 +26,11 @@ const char* ota_Password = "47110815";
 
 //!!!!!!!!!!!!!DIE HIER SIND ZUM TUNEN DER ERKENNUNG!!!!!!!!!!!!!!!!!!!!
 
-const int count=4;   //WIE LANGE DIE BEWEGUNG ANHALTEN MUSS
-const int triggerCount=30;    //WIE LANGE KEINE NEUEN EVENTS ERKANNT WERDEN
+const int count=6;   //WIE LANGE DIE BEWEGUNG ANHALTEN MUSS
+const int triggerCount=150;    //WIE LANGE KEINE NEUEN EVENTS ERKANNT WERDEN
 const int threshhold=9;     //WIE STARK DIE BEWEGUNG SEIN MUSS
+const int countUp = 6;
+const int countRight = 4;
 
 WiFiClient net;
 PubSubClient client(net);
@@ -48,6 +51,7 @@ int counterdown = 0;
 int counterleft = 0;
 int counterright = 0;
 float mittel[3] = {0,0,0};
+bool flagInitPhase = true;
 
 void connect() {
   //startton();
@@ -156,15 +160,9 @@ void setup() {
   
 }
 
-
-/////////////////////////////////////////////////////////////////////////
-
-//X UND Y ACHSE SIND VERTAUSCHT, BITTE NICHT "FIXEN", DAS SOLL SO
-
-/////////////////////////////////////////////////////////////////////////
-
-
-
+///////////////////////////////////////////////////////////////////////
+//  X UND Y ACHSE SIND VERTAUSCHT, BITTE NICHT "FIXEN", DAS SOLL SO  //
+///////////////////////////////////////////////////////////////////////
 
 void loop() {
   client.loop();
@@ -192,11 +190,14 @@ void loop() {
     mittel[0] = 0;
     mittel[1] = 0;
     mittel[2] = 0;
-
+    flagInitPhase = false;
     for (int coord = 0; coord < 3; coord++) {
       for (int entry = 99; entry != 0; entry--) {
         if (buffer[coord][entry] != NULL) {
           mittel[coord] += buffer[coord][entry];
+        }
+        else {
+          flagInitPhase = true;
         }
       }
     }
@@ -212,15 +213,15 @@ void loop() {
     float intensity = sqrt(delta[0] * delta[0] + delta[1] * delta[1] + delta[2] * delta[2]);
 
     trigger = trigger > 0 ? trigger - 1 : trigger;
-    if (intensity > threshhold && trigger == 0) {
+    if (!flagInitPhase && intensity > threshhold && trigger == 0) {
       if (abs(delta[2]) > abs(delta[1])) {
         if (delta[2] > 0) {
           counterup += 1;
-          counterdown += -1;
+          //counterdown += -1;
           counterleft += -1;
           counterright += -1;
-          if (counterup > count) {
-            client.publish("kopf/Move", "UP");
+          if (counterup > countUp) {
+            client.publish("hand/Move", "UP");
             Serial.println("Bewegung oben erkannt!");
             counterup = 0;
             counterdown = 0;
@@ -230,12 +231,12 @@ void loop() {
           }
         }
         else {
-          counterup += -1;
+          //counterup += -1;
           counterdown += +1;
           counterleft += -1;
           counterright += -1;
           if (counterdown > count) {
-            client.publish("kopf/Move", "DOWN");
+            client.publish("hand/Move", "DOWN");
             Serial.println("Bewegung unten erkannt!");
             counterup = 0;
             counterdown = 0;
@@ -249,11 +250,11 @@ void loop() {
         if (delta[1] > 0) {
           counterup += -1;
           counterdown += -1;
-          counterleft += -1;
+          //counterleft += -1;
           counterright += 1;
-          if (counterright > count) {
-            client.publish("kopf/Move", "LEFT");
-            Serial.println("Bewegung links erkannt!");
+          if (counterright > countRight) {
+            client.publish("hand/Move", "RIGHT");
+            Serial.println("Bewegung rechts erkannt!");
             counterup = 0;
             counterdown = 0;
             counterleft = 0;
@@ -265,10 +266,10 @@ void loop() {
           counterup += -1;
           counterdown += -1;
           counterleft += 1;
-          counterright += -1;
+          //counterright += -1;
           if (counterleft > count) {
-            client.publish("kopf/Move", "RIGHT");
-            Serial.println("Bewegung rechts erkannt!");
+            client.publish("hand/Move", "LEFT");
+            Serial.println("Bewegung links erkannt!");
             counterup = 0;
             counterdown = 0;
             counterleft = 0;

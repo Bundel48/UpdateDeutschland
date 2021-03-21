@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "esp32_handsensor",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"random": "cpp"
+		}
+	}
+}
