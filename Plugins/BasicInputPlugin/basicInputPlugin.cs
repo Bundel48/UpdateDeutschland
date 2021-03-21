@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using NLog;
 using SlimMessageBus;
@@ -31,9 +32,9 @@ namespace middleware {
         public async Task loop() {
             while (true) {
                 Console.WriteLine("Senden");
-                await bus.Publish(new BasicControlMessage() { command = "GO UP!" });
+                await bus.Publish(new BasicControlMessage() { command = "OK" });
                 
-                await Task.Delay(1000);
+                Thread.Sleep(1000);
             }
         }
     }

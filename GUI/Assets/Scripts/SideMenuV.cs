@@ -120,9 +120,12 @@ public class SideMenuV : MonoBehaviour
         //Debug.Log(Communication_Button.GetComponent<Button>().colors.normalColor);
 
         //reaction on inputs my guy
-        if (Input.GetKeyUp(KeyCode.W))
+
+        SensorControl sc = GameObject.Find("SensorControlScriptHelper").GetComponent<SensorControl>();
+        if (Input.GetKeyUp(KeyCode.W) || sc.pressedUp)
         {
             Debug.Log("Up.");
+            sc.pressedUp = false;
             if(currentPanel == 1){
                 switch(lastSelectedButton.name){
                     case "Entertainment_Button":
@@ -189,10 +192,11 @@ public class SideMenuV : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyUp(KeyCode.X))
+        if (Input.GetKeyUp(KeyCode.X) || sc.pressedOk)
         {
             Debug.Log("confirm.");
-            
+            sc.pressedOk = false;
+
             switch (lastSelectedButton.name){
                 case "Help_Button":
                     //Help_Screen.SetActive(true);
@@ -265,9 +269,10 @@ public class SideMenuV : MonoBehaviour
                     break;
             }
         }
-        if (Input.GetKeyUp(KeyCode.S))
+        if (Input.GetKeyUp(KeyCode.S) || sc.pressedDown)
         {
             Debug.Log("down.");
+            sc.pressedDown = false;
             if(currentPanel == 1){
                 switch(lastSelectedButton.name){
                     case "Communication_Button":

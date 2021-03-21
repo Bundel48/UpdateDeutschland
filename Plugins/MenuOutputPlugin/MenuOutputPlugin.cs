@@ -40,23 +40,31 @@ namespace middleware {
 
     public class BasicControlMessageConsumer : IConsumer<BasicControlMessage> {
         WatsonWsServer socket;
-        private string lastClient = "";
+        private List<string> lastClients = new List<string>();
         public BasicControlMessageConsumer(WatsonWsServer socket) {
             this.socket = socket;
             socket.ClientConnected += ClientConnected;
+            socket.ClientDisconnected += ClientDisconnected;
 
             socket.Start();
         }
 
         void ClientConnected(object sender, ClientConnectedEventArgs args) {
             Console.WriteLine("Client connected: " + args.IpPort);
-            lastClient = args.IpPort;
+            lastClients.Add(args.IpPort);
+        }
+
+        void ClientDisconnected(object sender, ClientDisconnectedEventArgs args) {
+            Console.WriteLine("Client connected: " + args.IpPort);
+            lastClients.Remove(args.IpPort);
         }
 
         public async Task OnHandle(BasicControlMessage message, string name) {
             Console.WriteLine("received control command: "+message.command);
-            if (lastClient != "") {
-                await socket.SendAsync(lastClient, message.command, CancellationToken.None);
+            if (lastClients.Count > 0) {
+                foreach(string lastClient in lastClients) {
+                    await socket.SendAsync(lastClient, message.command, CancellationToken.None);
+                }
             } else {
                 await Task.Delay(10);
             }
