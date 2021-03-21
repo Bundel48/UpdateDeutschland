@@ -219,6 +219,12 @@ public class Setup : MonoBehaviour
         loadCard(usedCards[usedCards.Count-1], playerCarddrawerStartX + 250, 700);
     }
 
+    public void repositionPlayerCards(){
+        for(int playerShower = 0; playerShower < playerCards.Count; playerShower++){
+            float calcWidth = 1000 / (playerCards.Count + 1);
+            playerCards[playerShower].cardObject.transform.position = new Vector3(playerCarddrawerStartX + (calcWidth * playerShower), playerCarddrawerStartY, 0);
+        }
+    }
 
 
 
@@ -235,10 +241,10 @@ public class Setup : MonoBehaviour
 
 
         }else if (Input.GetKeyUp(KeyCode.Keypad5)){
-            factorInRules();
             Debug.Log("wut");
-            Debug.Log(checkForAllowance(usedCards[usedCards.Count-1], playerCards[CurrentCard]));
-            makeMove(CurrentCard);
+            if(checkForAllowance(usedCards[usedCards.Count-1], playerCards[CurrentCard])){
+                makeMove(CurrentCard);
+            }
 
 
         }else if (Input.GetKeyUp(KeyCode.Keypad4)){
@@ -250,6 +256,8 @@ public class Setup : MonoBehaviour
         }
 
         CardSelector();
+        repositionPlayerCards();
+        factorInRules();
     }    
 
     public void CardSelector(){
@@ -284,11 +292,44 @@ public class Setup : MonoBehaviour
 
     public void makeMove(int chosenCard){
         int cardType = playerCards[chosenCard].cardNumber;
-        if(cardType <10){
+        if(cardType < 10){
             usedCards.Add(playerCards[chosenCard]);
+            Destroy(playerCards[chosenCard].cardObject);
             playerCards.RemoveAt(chosenCard);
             displayTopCard();
+            repositionPlayerCards();
+            makeAIMove();
+        }
+    }
+
+    public void makeAIMove(){
+        Debug.Log("AI nowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww" + usedCards.Count);
+        List<int> possible = new List<int>();
+        for(int computerCardcounter = 0; computerCardcounter < computerCards.Count; computerCardcounter++){
+            if(checkForAllowance(usedCards[usedCards.Count-1], computerCards[computerCardcounter])){
+                possible.Add(computerCardcounter);
+            }
         }
 
+        if(possible.Count > 0){
+            int chosenCard= Random.Range(0, possible.Count);
+
+            Debug.Log("playing possible Card number: " + chosenCard);
+
+            int cardType = computerCards[chosenCard].cardNumber;
+            if(cardType < 10){
+                usedCards.Add(playerCards[chosenCard]);
+                Destroy(playerCards[chosenCard].cardObject);
+                playerCards.RemoveAt(chosenCard);
+                displayTopCard();
+                repositionPlayerCards();
+            }
+        }else{
+            Debug.Log("no options");
+            Debug.Log(computerCards.Count);
+            computerCards.Add(cardStack[0]);
+            cardStack.RemoveAt(0);  
+        }
+            Debug.Log(computerCards.Count + "             " +  usedCards.Count);
     }
 }

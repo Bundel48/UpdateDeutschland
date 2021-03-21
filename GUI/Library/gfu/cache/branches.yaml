@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2021-03-21T04:53:51.816+01:00
-  initializedAtString: 2021-03-21T04:52:29.942+01:00
+  lastUpdatedAtString: 2021-03-21T06:10:38.742+01:00
+  initializedAtString: 2021-03-21T05:53:26.774+01:00
   localBranches:
   - name: GUI
     tracking: origin/GUI
+  - name: GUIKonstiBackedUp
+    tracking: origin/GUIKonstiBackedUp
   - name: main
     tracking: origin/main
   remoteBranches:
   - name: origin/GUI
+    tracking: '[None]'
+  - name: origin/GUIKonstiBackedUp
     tracking: '[None]'
   - name: origin/HEAD
     tracking: '[None]'
@@ -36,6 +40,7 @@ MonoBehaviour:
   localConfigBranches:
     keys:
     - GUI
+    - GUIKonstiBackedUp
     - main
     values:
     - name: GUI
@@ -43,6 +48,11 @@ MonoBehaviour:
         name: origin
         url: https://github.com/Bundel48/UpdateDeutschland.git
       trackingBranch: GUI
+    - name: GUIKonstiBackedUp
+      remote:
+        name: origin
+        url: https://github.com/Bundel48/UpdateDeutschland.git
+      trackingBranch: GUIKonstiBackedUp
     - name: main
       remote:
         name: origin
@@ -54,10 +64,16 @@ MonoBehaviour:
     subKeys:
     - Values:
       - GUI
+      - GUIKonstiBackedUp
       - HEAD
     subKeyValues:
     - Values:
       - name: GUI
+        remote:
+          name: origin
+          url: https://github.com/Bundel48/UpdateDeutschland.git
+        trackingBranch: 
+      - name: GUIKonstiBackedUp
         remote:
           name: origin
           url: https://github.com/Bundel48/UpdateDeutschland.git
