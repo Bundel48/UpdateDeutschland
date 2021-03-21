@@ -33,7 +33,7 @@ namespace middleware
             string[] pluginFilesArray = 
                 Directory.GetFiles("plugins/", "*.dll");
             ArrayList pluginFiles = new ArrayList(pluginFilesArray);
-            pluginFiles.Add("../Plugins/BasicInputPlugin/build/net5.0/BasicInputPlugin.dll");
+            pluginFiles.Add("../Plugins/SensorNodeInputPlugin/build/net5.0/SensorNodeInputPlugin.dll");
             pluginFiles.Add("../Plugins/MenuOutputPlugin/build/net5.0/MenuOutputPlugin.dll");
             // Use this line to add a plugin that is not within the plugin subfolder
             // dlls within the plugin folder are loaded automatically
@@ -103,6 +103,7 @@ namespace middleware
             
             foreach (IPlugin plugin in plugins) {
                 var pluginTask = Task.Factory.StartNew(plugin.loop, CancellationToken.None, TaskCreationOptions.LongRunning, TaskScheduler.Default);
+                Console.WriteLine("started plugin loop "+plugin);
             }
             
             
@@ -111,7 +112,7 @@ namespace middleware
             //produceTask.Start();
 
             while(true) {
-                Task.Delay(100);
+                Thread.Sleep(100);
             }
         }
     }

@@ -33,8 +33,10 @@ namespace middleware {
         
         public async Task loop() {
             while (true) {
-                await Task.Delay(1000);
+                Thread.Sleep(1000);
             }
+
+            await Task.FromResult(0);
         }
     }
 
