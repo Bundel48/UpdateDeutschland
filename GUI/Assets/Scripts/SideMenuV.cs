@@ -63,6 +63,9 @@ public class SideMenuV : MonoBehaviour
     //Animations
     public Animator Start_Animation;
     public Animator Communication_Animation;
+    public Animator Help_Animation;
+    public Animator Entertainment_Animation;
+    public Animator Training_Animation;
 
 
 
@@ -187,19 +190,21 @@ public class SideMenuV : MonoBehaviour
             
             switch (lastSelectedButton.name){
                 case "Help_Button":
-                    Help_Screen.SetActive(true);
+                    //Help_Screen.SetActive(true);
                     recolorAllBackgrounds(colorHelp);
                     changeButton(LeaveHelp_Button);
+                    slidePanelsEntry(Help_Animation);
                     currentPanel = 2;
                     break;
                 case "LeaveHelp_Button":
-                    Help_Screen.SetActive(false);
+                    //Help_Screen.SetActive(false);
                     recolorAllBackgrounds(colorStartScreen);
                     changeButton(Communication_Button);
+                    slidePanelsExit(Help_Animation);
                     currentPanel = 1;
                     break;
                 case "Communication_Button":
-                    Communication_Screen.SetActive(true);
+                    //Communication_Screen.SetActive(true);
                     recolorAllBackgrounds(colorCommunication);
                     changeButton(LeaveCommunication_Button);
                     slidePanelsEntry(Communication_Animation);
@@ -213,27 +218,31 @@ public class SideMenuV : MonoBehaviour
                     currentPanel = 1;
                     break;
                 case "Entertainment_Button":
-                    Entertainment_Screen.SetActive(true);
+                   // Entertainment_Screen.SetActive(true);
                     recolorAllBackgrounds(colorEntertainment);
                     changeButton(LeaveEntertainment_Button);
+                    slidePanelsEntry(Entertainment_Animation);
                     currentPanel = 4;
                     break;
                 case "LeaveEntertainment_Button":
-                    Entertainment_Screen.SetActive(false);
+                    //Entertainment_Screen.SetActive(false);
                     recolorAllBackgrounds(colorStartScreen);
                     changeButton(Communication_Button);
+                    slidePanelsExit(Entertainment_Animation);
                     currentPanel = 1;
                     break;
                 case "Training_Button":
-                    Training_Screen.SetActive(true);
+                   // Training_Screen.SetActive(true);
                     recolorAllBackgrounds(colorTraining);
                     changeButton(LeaveTraining_Button);
+                    slidePanelsEntry(Training_Animation);
                     currentPanel = 5;
                     break;
                 case "LeaveTraining_Button":
-                    Training_Screen.SetActive(false);
+                    //Training_Screen.SetActive(false);
                     recolorAllBackgrounds(colorStartScreen);
                     changeButton(Communication_Button);
+                    slidePanelsExit(Training_Animation);
                     currentPanel = 1;
                     break;
             }
@@ -324,19 +333,20 @@ public class SideMenuV : MonoBehaviour
 
     void slidePanelsEntry(Animator cur_Panel_Animation)
     {
-        Start_Animation.SetTrigger("Exit");
-        Start_Animation.ResetTrigger("Entry");
-        Communication_Screen.SetActive(true);
-        cur_Panel_Animation.SetTrigger("Entry");
+        Start_Animation.SetBool("Entry_B", false);   
+        cur_Panel_Animation.SetBool("Exit_B", false);
+        Start_Animation.SetBool("Exit_B", true);
+        cur_Panel_Animation.SetBool("Entry_B", true);
+        
     }    
     
     void slidePanelsExit(Animator cur_Panel_Animation)
     {
-        Start_Animation.SetTrigger("Entry");
-        Start_Animation.ResetTrigger("Exit");
-        Communication_Screen.SetActive(true);
-        cur_Panel_Animation.SetTrigger("Exit");
-        cur_Panel_Animation.ResetTrigger("Entry");
+        Start_Animation.SetBool("Exit_B", false);
+        cur_Panel_Animation.SetBool("Entry_B", false);
+        Start_Animation.SetBool("Entry_B", true);
+        cur_Panel_Animation.SetBool("Exit_B", true);
+        
         
     }
 
