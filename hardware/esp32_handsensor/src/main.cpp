@@ -8,6 +8,8 @@
 #include <WiFiUdp.h>
 #include <PubSubClient.h>
 #include <ArduinoOTA.h>
+#include <Tone32.h>
+#include <SmartLeds.h>
 
 const char* ssid = "GATEWAY49";
 const char* pass = "Ready2start";
@@ -23,18 +25,21 @@ const char* mqtt_Name = "hand";
 const char* ota_Name = "hand";
 const char* ota_Password = "47110815";
 
+#define LEDPIN 27
+#define BUZZPIN 14
+#define VIBPIN 12
 
 //!!!!!!!!!!!!!DIE HIER SIND ZUM TUNEN DER ERKENNUNG!!!!!!!!!!!!!!!!!!!!
 
-const int count=6;   //WIE LANGE DIE BEWEGUNG ANHALTEN MUSS
-const int triggerCount=150;    //WIE LANGE KEINE NEUEN EVENTS ERKANNT WERDEN
-const int threshhold=9;     //WIE STARK DIE BEWEGUNG SEIN MUSS
+const int count = 6;   //WIE LANGE DIE BEWEGUNG ANHALTEN MUSS
+const int triggerCount = 150;    //WIE LANGE KEINE NEUEN EVENTS ERKANNT WERDEN
+const int threshhold = 9;     //WIE STARK DIE BEWEGUNG SEIN MUSS
 const int countUp = 6;
 const int countRight = 4;
 
 WiFiClient net;
 PubSubClient client(net);
-
+SmartLed leds( LED_SK6812, 1, LEDPIN, 0, DoubleBuffer );
 MPU9250 IMU(Wire,0x68);
 
 int status;
@@ -53,8 +58,51 @@ int counterright = 0;
 float mittel[3] = {0,0,0};
 bool flagInitPhase = true;
 
+void startton() {
+  leds[0] = Rgb{ 100, 100, 0 };
+  tone(BUZZPIN,440,500,0);
+}
+void finishton() {
+  leds[0] = Rgb{ 0, 100, 0 };
+//  tone(BUZZPIN,500,500);
+//  tone(BUZZPIN,0,500);
+  tone(BUZZPIN,500,200,0);
+  tone(BUZZPIN,0,200,0);
+  tone(BUZZPIN,500,200,0);
+  tone(BUZZPIN,0,200,0);
+  tone(BUZZPIN,1000,1000,0);
+}
+void checkton(int type) { //1 => UP | 2 => DOWN | 3 => LEFT | 4 => RIGHT
+  leds[0] = Rgb{ 0, 0, 100 };
+  digitalWrite(VIBPIN,HIGH);
+  switch (type) {
+    case 1:
+      tone(BUZZPIN,2500,30,0);
+    break;
+    case 2:
+      tone(BUZZPIN,500,30,0);
+    break;
+    case 3:
+      tone(BUZZPIN,1200,30,0);
+    break;
+    case 4:
+      tone(BUZZPIN,1700,30,0);
+    break;
+  }
+  delay(100);
+  leds[0] = Rgb{ 0, 100, 0 };
+  digitalWrite(VIBPIN,LOW); 
+}
+void errorton() {
+  leds[0] = Rgb{ 100, 0, 0 };
+  tone(BUZZPIN,500,200,0);
+  tone(BUZZPIN,0,200,0);
+  tone(BUZZPIN,300,600,0);
+
+}
+
 void connect() {
-  //startton();
+  startton();
   Serial.print("checking wifi...");
   while (WiFi.status() != WL_CONNECTED) {
     Serial.print(".");
@@ -92,12 +140,14 @@ void callback(char* topic, byte* payload, int length) {
 void setup() {
   Serial.begin(115200);
   while(!Serial) {}
+  pinMode(VIBPIN, OUTPUT);
 
   WiFi.begin(ssid, pass);
   client.setServer(mqtt_Host, mqtt_Port);
   client.setCallback(callback);
 
   connect();
+
 
   ArduinoOTA.setHostname(ota_Name);
   ArduinoOTA.setPassword(ota_Password);
@@ -122,7 +172,7 @@ void setup() {
   });
 
   ArduinoOTA.onError([](ota_error_t error) {
-    
+    errorton();
     Serial.printf("Error[%u]: ", error);
     if (error == OTA_AUTH_ERROR) Serial.println("Auth Failed");
     else if (error == OTA_BEGIN_ERROR) Serial.println("Begin Failed");
@@ -147,7 +197,8 @@ void setup() {
     Serial.println("Check IMU wiring or try cycling power");
     Serial.print("Status: ");
     Serial.println(status);
-    while(1) {}
+    errorton();
+    ESP.restart();
   }
   // setting the accelerometer full scale range to +/-8G 
   IMU.setAccelRange(MPU9250::ACCEL_RANGE_4G);
@@ -157,7 +208,7 @@ void setup() {
   IMU.setDlpfBandwidth(MPU9250::DLPF_BANDWIDTH_10HZ);
   // setting SRD to 19 for a 50 Hz update rate
   IMU.setSrd(19);
-  
+  finishton();
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -170,6 +221,7 @@ void loop() {
 
   if (!client.connected()) {
     //Serial.println("Error, connection MQTT lost!");
+    errorton();
     connect();
   }
   IMU.readSensor();
@@ -223,6 +275,7 @@ void loop() {
           if (counterup > countUp) {
             client.publish("hand/Move", "UP");
             Serial.println("Bewegung oben erkannt!");
+            checkton(1); //1 => UP
             counterup = 0;
             counterdown = 0;
             counterleft = 0;
@@ -238,6 +291,7 @@ void loop() {
           if (counterdown > count) {
             client.publish("hand/Move", "DOWN");
             Serial.println("Bewegung unten erkannt!");
+            checkton(2); //2 => DOWN
             counterup = 0;
             counterdown = 0;
             counterleft = 0;
@@ -255,6 +309,7 @@ void loop() {
           if (counterright > countRight) {
             client.publish("hand/Move", "RIGHT");
             Serial.println("Bewegung rechts erkannt!");
+            checkton(4); //4 => RIGHT
             counterup = 0;
             counterdown = 0;
             counterleft = 0;
@@ -270,6 +325,7 @@ void loop() {
           if (counterleft > count) {
             client.publish("hand/Move", "LEFT");
             Serial.println("Bewegung links erkannt!");
+            checkton(3); //3 => LEFT
             counterup = 0;
             counterdown = 0;
             counterleft = 0;
