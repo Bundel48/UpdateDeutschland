@@ -12,6 +12,7 @@ public class SideMenuV : MonoBehaviour
     public GameObject Communication_Screen;
     public GameObject Entertainment_Screen;
     public GameObject Training_Screen;
+    public GameObject Success_Screen;
 
     Color lerpedColor = Color.white;
 
@@ -54,11 +55,14 @@ public class SideMenuV : MonoBehaviour
     public GameObject SecondEntertainment_Button;
     public GameObject ThirdEntertainment_Button;
 
-    //Übungspanel
+    //Uebungspanel
     public GameObject LeaveTraining_Button;
     public GameObject FirstTraining_Button;
     public GameObject SecondTraining_Button;
     public GameObject ThirdTraining_Button;
+
+    //Successpanel
+    public GameObject LeaveSuccess_Button;
 
     //Animations
     public Animator Start_Animation;
@@ -66,6 +70,7 @@ public class SideMenuV : MonoBehaviour
     public Animator Help_Animation;
     public Animator Entertainment_Animation;
     public Animator Training_Animation;
+    public Animator Success_Animation;
 
 
 
@@ -244,6 +249,19 @@ public class SideMenuV : MonoBehaviour
                     changeButton(Communication_Button);
                     slidePanelsExit(Training_Animation);
                     currentPanel = 1;
+                    break;
+                 case "LeaveSuccess_Button":
+                    recolorAllBackgrounds(colorStartScreen);
+                    changeButton(Communication_Button);
+                    slidePanelsExit(Success_Animation);
+                    currentPanel = 1;
+                    break;
+                case "Toilet_Button":
+                    // Training_Screen.SetActive(true);
+                    recolorAllBackgrounds(colorHelp);
+                    changeButton(LeaveSuccess_Button);
+                    slidePanelsEntry(Success_Animation);
+                    currentPanel = 6;
                     break;
             }
         }
