@@ -3,12 +3,11 @@
 #include <Arduino.h>
 #include "SPI.h"
 #include <Wire.h>
-#include <ESP8266WiFi.h>
-#include <ESP8266mDNS.h>
-#include <PubSubClient.h>
-#include <Buzzer.h>
-#include <ArduinoOTA.h>
+#include <WiFi.h>
+#include <ESPmDNS.h>
 #include <WiFiUdp.h>
+#include <PubSubClient.h>
+#include <ArduinoOTA.h>
 
 const char* ssid = "GATEWAY49";
 const char* pass = "Ready2start";
@@ -17,10 +16,12 @@ const char mqtt_Host[] = "135.125.216.231";
 const int mqtt_Port = 1883;
 const char* mqtt_User = "recomo";
 const char* mqtt_Password = "Recomo123%";
-const char* mqtt_Name = "brille";
+const char* mqtt_Name = "hand";
+#define MQTT_PREF "hand"
 
-const char* ota_Name = "brille";
+const char* ota_Name = "hand";
 const char* ota_Password = "47110815";
+
 
 //!!!!!!!!!!!!!DIE HIER SIND ZUM TUNEN DER ERKENNUNG!!!!!!!!!!!!!!!!!!!!
 
@@ -30,16 +31,13 @@ const int threshhold=9;     //WIE STARK DIE BEWEGUNG SEIN MUSS
 
 WiFiClient net;
 PubSubClient client(net);
-Buzzer buzzer(3);
 
 MPU9250 IMU(Wire,0x68);
 
 int status;
-unsigned long updateMillis = 0;
+
 unsigned long lastMillis = 0;
 float downAcc[3];
-
-
 float angle[3];
 float accelInt[3];
 float delta[3];
@@ -51,57 +49,47 @@ int counterleft = 0;
 int counterright = 0;
 float mittel[3] = {0,0,0};
 
-
-void startton() {
-
-}
-
 void connect() {
   //startton();
-  //Serial.print("checking wifi...");
+  Serial.print("checking wifi...");
   while (WiFi.status() != WL_CONNECTED) {
-    //Serial.print(".");
+    Serial.print(".");
     delay(500);
   }
   while (!client.connected()) {
-    //Serial.println("Connecting to MQTT...");
+    Serial.println("Connecting to MQTT...");
+
     if (client.connect(mqtt_Name, mqtt_User, mqtt_Password)) {
-      //Serial.println("connected to MQTT broker");
+      Serial.println("connected to MQTT broker");
     }
     else {
-      //Serial.print("failed with state ");
-      //Serial.print(client.state());
+      Serial.print("failed with state ");
+      Serial.print(client.state());
       delay(500);
     }
   }
-  //Serial.println("\nconnected!");
+  Serial.println("\nconnected!");
 }
 
 void callback(char* topic, byte* payload, int length) {
-  /*
   Serial.print("Message received in topic: ");
   Serial.print(topic);
   Serial.print("   length is:");
   Serial.println(length);
-
   Serial.print("Data Received From Broker:");
   for (int i = 0; i < length; i++) {
     Serial.print((char)payload[i]);
   }
-
   Serial.println();
   Serial.println("-----------------------");
   Serial.println();
-  */
 }
 
 void setup() {
-  //Serial.begin(9600);
-  //while(!Serial) {}
+  Serial.begin(115200);
+  while(!Serial) {}
 
-  WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, pass);
-
   client.setServer(mqtt_Host, mqtt_Port);
   client.setCallback(callback);
 
@@ -118,54 +106,65 @@ void setup() {
       type = "filesystem";
 
     // NOTE: if updating SPIFFS this would be the place to unmount SPIFFS using SPIFFS.end()
-    //Serial.println("Start updating " + type);
+    Serial.println("Start updating " + type);
   });
 
   ArduinoOTA.onEnd([]() {
-    //Serial.println("\nEnd");
+    Serial.println("\nEnd");
   });
 
   ArduinoOTA.onProgress([](unsigned int progress, unsigned int total) {
-    //Serial.printf("Progress: %u%%\r", (progress / (total / 100)));
+    Serial.printf("Progress: %u%%\r", (progress / (total / 100)));
   });
 
   ArduinoOTA.onError([](ota_error_t error) {
-    /*
+    
     Serial.printf("Error[%u]: ", error);
     if (error == OTA_AUTH_ERROR) Serial.println("Auth Failed");
     else if (error == OTA_BEGIN_ERROR) Serial.println("Begin Failed");
     else if (error == OTA_CONNECT_ERROR) Serial.println("Connect Failed");
     else if (error == OTA_RECEIVE_ERROR) Serial.println("Receive Failed");
     else if (error == OTA_END_ERROR) Serial.println("End Failed");
-    */
+    
   });
 
   ArduinoOTA.begin();
-  //Serial.println("Ready");
-  //Serial.print("IP address: ");
-  //Serial.println(WiFi.localIP());
+  Serial.println("Ready");
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());
 
-
-  Wire.begin(0,2);
+  Wire.begin(16,4);
+  // serial to display data
 
   // start communication with IMU 
   status = IMU.begin();
   if (status < 0) {
-    //Serial.println("IMU initialization unsuccessful");
-    //Serial.println("Check IMU wiring or try cycling power");
-    //Serial.print("Status: ");
-    //Serial.println(status);
-    ESP.restart();
+    Serial.println("IMU initialization unsuccessful");
+    Serial.println("Check IMU wiring or try cycling power");
+    Serial.print("Status: ");
+    Serial.println(status);
+    while(1) {}
   }
-  // setting the accelerometer full scale range to +/-4G 
+  // setting the accelerometer full scale range to +/-8G 
   IMU.setAccelRange(MPU9250::ACCEL_RANGE_4G);
-  // setting the gyroscope full scale range to +/-250 deg/s
+  // setting the gyroscope full scale range to +/-500 deg/s
   IMU.setGyroRange(MPU9250::GYRO_RANGE_250DPS);
-  // setting DLPF bandwidth to 5 Hz
-  IMU.setDlpfBandwidth(MPU9250::DLPF_BANDWIDTH_5HZ);
+  // setting DLPF bandwidth to 20 Hz
+  IMU.setDlpfBandwidth(MPU9250::DLPF_BANDWIDTH_10HZ);
   // setting SRD to 19 for a 50 Hz update rate
   IMU.setSrd(19);
+  
 }
+
+
+/////////////////////////////////////////////////////////////////////////
+
+//X UND Y ACHSE SIND VERTAUSCHT, BITTE NICHT "FIXEN", DAS SOLL SO
+
+/////////////////////////////////////////////////////////////////////////
+
+
+
 
 void loop() {
   client.loop();
@@ -222,7 +221,7 @@ void loop() {
           counterright += -1;
           if (counterup > count) {
             client.publish("kopf/Move", "UP");
-            //Serial.println("Bewegung oben erkannt!");
+            Serial.println("Bewegung oben erkannt!");
             counterup = 0;
             counterdown = 0;
             counterleft = 0;
@@ -237,7 +236,7 @@ void loop() {
           counterright += -1;
           if (counterdown > count) {
             client.publish("kopf/Move", "DOWN");
-            //Serial.println("Bewegung unten erkannt!");
+            Serial.println("Bewegung unten erkannt!");
             counterup = 0;
             counterdown = 0;
             counterleft = 0;
@@ -254,7 +253,7 @@ void loop() {
           counterright += 1;
           if (counterright > count) {
             client.publish("kopf/Move", "LEFT");
-            //Serial.println("Bewegung links erkannt!");
+            Serial.println("Bewegung links erkannt!");
             counterup = 0;
             counterdown = 0;
             counterleft = 0;
@@ -269,7 +268,7 @@ void loop() {
           counterright += -1;
           if (counterleft > count) {
             client.publish("kopf/Move", "RIGHT");
-            //Serial.println("Bewegung rechts erkannt!");
+            Serial.println("Bewegung rechts erkannt!");
             counterup = 0;
             counterdown = 0;
             counterleft = 0;
@@ -310,5 +309,3 @@ void loop() {
     client.publish("/"+mqtt_Pref+"/GyroZ", buffer);
   */
 }
-
- 
