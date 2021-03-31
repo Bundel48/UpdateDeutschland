@@ -14,6 +14,10 @@
 #define sdaPin 0
 #define sclPin 2
 
+boolean test=true;
+
+boolean head=false;
+
 const char* ssid = "GATEWAY49";
 const char* pass = "Ready2start";
 
@@ -31,6 +35,8 @@ const char* ota_Password = "47110815";
 const int count = 2;   //WIE LANGE DIE BEWEGUNG ANHALTEN MUSS
 const int triggerCount = 150;    //WIE LANGE KEINE NEUEN EVENTS ERKANNT WERDEN
 const int threshhold = 1;     //WIE STARK DIE BEWEGUNG SEIN MUSS
+unsigned long timeToCheck=10;
+
 
 WiFiClient net;
 PubSubClient client(net);
@@ -43,8 +49,9 @@ unsigned long lastMillis = 0;
 float downAcc[3];
 
 
-float angle[3];
-float accelInt[3];
+float gyroData[3];
+float integral[3];
+float pitchRollYaw[3]={0,0,0};
 float delta[3];
 float buffer[3][100];
 int trigger = 0;
@@ -53,7 +60,13 @@ int counterdown = 0;
 int counterleft = 0;
 int counterright = 0;
 float mittel[3] = {0,0,0};
+float measurement[3]={0,0,0};
 bool flagInitPhase = true;
+
+float kalmanGain[3]={0,0,0};
+float estimate[3]={10,10,10};
+#define M_PI 3.14159265359
+
 
 void startton() {
   tone(buzzPin,440,500);
@@ -97,6 +110,9 @@ void connect() {
     //Serial.print(".");
     delay(500);
   }
+  
+  #ifdef test=false
+
   while (!client.connected()) {
     //Serial.println("Connecting to MQTT...");
     if (client.connect(mqtt_Name, mqtt_User, mqtt_Password)) {
@@ -108,6 +124,7 @@ void connect() {
       delay(500);
     }
   }
+  #endif
   //Serial.println("\nconnected!");
 }
 
@@ -129,6 +146,29 @@ void callback(char* topic, byte* payload, int length) {
   */
 }
 
+void kalmanFilter(){};
+
+
+
+void complementaryFilter(){
+    float pitchAcc, rollAcc;
+
+    pitchRollYaw[0]+=(gyroData[0]/65.536)*(timeToCheck/1000);
+    pitchRollYaw[1]-=(gyroData[1]/65.536)*(timeToCheck/1000);
+
+    int forceMagnitudeApprox = abs(measurement[0])+abs(measurement[1])+abs(measurement[2]);
+    if(forceMagnitudeApprox>8192 && forceMagnitudeApprox<32768)
+    {
+      pitchAcc=atan2f(measurement[1],measurement[2])*180/M_PI;
+      pitchRollYaw[0]=pitchRollYaw[0]*0.98+pitchAcc*0.02;
+
+      rollAcc=atan2f(measurement[0],measurement[2])*180/M_PI;
+      pitchRollYaw[1]=pitchRollYaw[1]*0.98+rollAcc*0.02;
+    }
+};
+
+
+
 void setup() {
   //Serial.begin(9600);
   //while(!Serial) {}
@@ -138,10 +178,10 @@ void setup() {
 
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, pass);
-
+#ifdef test=false
   client.setServer(mqtt_Host, mqtt_Port);
   client.setCallback(callback);
-
+#endif
   connect();
 
   ArduinoOTA.setHostname(ota_Name);
@@ -208,7 +248,9 @@ void setup() {
 }
 
 void loop() {
+  #ifdef test=false
   client.loop();
+  #endif
   ArduinoOTA.handle();
 
   if (!client.connected()) {
@@ -216,20 +258,41 @@ void loop() {
     errorton();
     connect();
   }
-  IMU.readSensor();
-  
+
   // publish a message roughly every second.
-  if (millis() - lastMillis > 10) {
+  if (millis() - lastMillis > timeToCheck) {
     lastMillis = millis();
-    
     IMU.readSensor();
-    angle[0] = (angle[0] + IMU.getGyroX_rads() * 0.1 * 180 / 3.14); 
-    angle[1] = (angle[1] + IMU.getGyroY_rads() * 0.1 * 180 / 3.14);
-    angle[2] = (angle[2] + IMU.getGyroZ_rads() * 0.1 * 180 / 3.14);
+
+
+gyroData[0]=IMU.getGyroX_rads()  * (180 / 3.14);
+gyroData[1]=IMU.getGyroY_rads()  * (180 / 3.14);
+gyroData[2]=IMU.getGyroZ_rads()  * (180 / 3.14);
+
+measurement[0]=IMU.getAccelX_mss();
+measurement[1]=IMU.getAccelY_mss();
+measurement[2]=IMU.getAccelZ_mss();
+
+complementaryFilter();
+
+
+
+
+
+
+
+
+
+
+
+
+  
     
-    accelInt[0] = IMU.getAccelX_mss();
-    accelInt[1] = IMU.getAccelY_mss();
-    accelInt[2] = IMU.getAccelZ_mss();
+    
+    
+    integral[0] = measurement[0];
+    integral[1] = measurement[1];
+    integral[2] = measurement[2];
 
     mittel[0] = 0;
     mittel[1] = 0;
@@ -252,9 +315,9 @@ void loop() {
     mittel[1] = mittel[1] / 100;  
     mittel[2] = mittel[2] / 100;
 
-    delta[0] = (mittel[0] - accelInt[0]);
-    delta[1] = (mittel[1] - accelInt[1]);
-    delta[2] = (mittel[2] - accelInt[2]);
+    delta[0] = (mittel[0] - integral[0]);
+    delta[1] = (mittel[1] - integral[1]);
+    delta[2] = (mittel[2] - integral[2]);
 
     float intensity = sqrt(delta[0] * delta[0] + delta[1] * delta[1] + delta[2] * delta[2]);
 
@@ -267,7 +330,12 @@ void loop() {
           counterleft += -1;
           counterright += -1;
           if (counterup > count) {
+            #ifdef test=false
             client.publish("kopf/Move", "LEFT");
+            #else
+            Serial.println("Up");
+            #endif
+
             checkton(1); //1 => UP
             //Serial.println("Bewegung oben erkannt!");
             counterup = 0;
@@ -283,7 +351,11 @@ void loop() {
           counterleft += -1;
           counterright += -1;
           if (counterdown > count) {
+            #ifdef test=false
             client.publish("kopf/Move", "RIGHT");
+            #else
+            Serial.println("Down");
+            #endif
             checkton(2); //2 => DOWN
             //Serial.println("Bewegung unten erkannt!");
             counterup = 0;
@@ -301,7 +373,11 @@ void loop() {
           //counterleft += -1;
           counterright += 1;
           if (counterright > count) {
+            #ifdef test=false
             client.publish("kopf/Move", "UP");
+            #else
+            Serial.println("Right");
+            #endif
             checkton(3); //3 => LEFT
             //Serial.println("Bewegung links erkannt!");
             counterup = 0;
@@ -317,7 +393,11 @@ void loop() {
           counterleft += 1;
           //counterright += -1;
           if (counterleft > count) {
+            #ifdef test=false
             client.publish("kopf/Move", "DOWN");
+            #else
+            Serial.println("Left");
+            #endif
             checkton(4); //4 => RIGHT
             //Serial.println("Bewegung rechts erkannt!");
             counterup = 0;
@@ -340,9 +420,16 @@ void loop() {
             buffer[coord][entry] = buffer[coord][entry-1];
           }
         }
-        buffer[coord][0] = accelInt[coord];
+        buffer[coord][0] = integral[coord];
       }
     }
+
+  Serial.print(pitchRollYaw[0]);
+  Serial.print(",");
+  Serial.print(pitchRollYaw[1]);
+  Serial.print(",");
+  Serial.println(pitchRollYaw[2]);
+
   }
   /*
     char buffer[6];
@@ -360,5 +447,3 @@ void loop() {
     client.publish("kopf/GyroZ", buffer);
     */
 }
-
- 
